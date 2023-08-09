@@ -93,6 +93,10 @@
 												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"catalogs\": [\n    {\n      \"name\": \"restaurants\",\n      \"description\": \"My Restaurants\",\n      \"fields\": [\n        {\n          \"name\": \"id\",\n          \"type\": \"string\"\n        }\n      ]\n    }\n  ]\n}"
+										},
 										"url": {
 											"raw": "https://{{instance_url}}/catalogs",
 											"protocol": "https",

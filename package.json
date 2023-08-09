@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "postman-to-openapi": "^3.0.1"
+  }
+}

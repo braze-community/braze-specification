@@ -1,0 +1,7 @@
+{
+  "replaceVars": true,
+  "additionalVars": {
+    "instance_url": "https://rest.example.braze.com"
+  },
+  "outputFormat": "json"
+}

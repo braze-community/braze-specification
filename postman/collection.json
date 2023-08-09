@@ -93,6 +93,10 @@
 												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"catalogs\": [\n    {\n      \"name\": \"restaurants\",\n      \"description\": \"My Restaurants\",\n      \"fields\": [\n        {\n          \"name\": \"id\",\n          \"type\": \"string\"\n        }\n      ]\n    }\n  ]\n}"
+										},
 										"url": {
 											"raw": "https://{{instance_url}}/catalogs",
 											"protocol": "https",
@@ -165,6 +169,10 @@
 												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"items\": [\n    {\n      \"id\": \"restaurant1\"\n    }\n  ]\n}"
+										},
 										"url": {
 											"raw": "https://{{instance_url}}/catalogs/{catalog_name}/items",
 											"protocol": "https",
@@ -197,6 +205,10 @@
 												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"items\": [\n    {\n      \"id\": \"restaurant1\",\n      \"Name\": \"Restaurant1\",\n      \"City\": \"New York\",\n      \"Cuisine\": \"American\",\n      \"Rating\": 5,\n      \"Loyalty_Program\": true,\n      \"Created_At\": \"2022-11-01T09:03:19.967+00:00\"\n    }\n  ]\n}"
+										},
 										"url": {
 											"raw": "https://{{instance_url}}/catalogs/{catalog_name}/items",
 											"protocol": "https",

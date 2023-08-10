@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "scripts/postman-to-openapi.sh",
+    "build": "p2o postman/collection.json --file openapi/spec.json --options postman-to-openapi.json",
     "clean": "rm -rf .cache openapi",
     "lint": "spectral lint openapi/spec.json --display-only-failures"
   },

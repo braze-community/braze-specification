@@ -8,6 +8,7 @@
     "postman-to-openapi": "^3.0.1"
   },
   "devDependencies": {
-    "@stoplight/spectral-cli": "^6.10.1"
+    "@stoplight/spectral-cli": "^6.10.1",
+    "prettier": "^3.0.1"
   }
 }

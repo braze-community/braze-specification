@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build": "scripts/postman-to-openapi.sh",
-    "clean": "rm -rf .cache openapi"
+    "clean": "rm -rf .cache openapi",
+    "lint": "spectral lint openapi/spec.json --display-only-failures"
   },
   "dependencies": {
     "postman-to-openapi": "^3.0.1"

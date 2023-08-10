@@ -1,14 +1,17 @@
 {
   "scripts": {
-    "build": "p2o postman/collection.json --file openapi/spec.json --options postman-to-openapi.json",
+    "build": "npm run build:openapi",
+    "build:openapi": "p2o postman/collection.json --file openapi/spec.json --options postman-to-openapi.json",
     "clean": "rm -rf .cache openapi",
-    "lint": "spectral lint openapi/spec.json --display-only-failures"
+    "lint": "spectral lint openapi/spec.json --display-only-failures",
+    "lint:tsc": "tsc --noEmit"
   },
   "dependencies": {
     "postman-to-openapi": "^3.0.1"
   },
   "devDependencies": {
     "@stoplight/spectral-cli": "^6.10.1",
-    "prettier": "^3.0.1"
+    "prettier": "^3.0.1",
+    "typescript": "^5.1.6"
   }
 }

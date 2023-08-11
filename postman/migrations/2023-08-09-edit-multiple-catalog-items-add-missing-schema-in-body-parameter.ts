@@ -1,8 +1,6 @@
 // @ts-nocheck
-import fs from 'fs';
-import path from 'path';
-import prettier from 'prettier';
 import collection from '../collection.json';
+import { writeCollection } from '../../utils';
 
 const catalogs = collection.item.find(({ name }) => name === 'Catalogs');
 
@@ -25,8 +23,4 @@ editMultipleCatalogItems.request.body = {
   raw: JSON.stringify(body, null, 2),
 };
 
-prettier
-  .format(JSON.stringify(collection), { parser: 'json' })
-  .then((data) =>
-    fs.writeFileSync(path.resolve(__dirname, '../collection.json'), data),
-  );
+writeCollection(collection);

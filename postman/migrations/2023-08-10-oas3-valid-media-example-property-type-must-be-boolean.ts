@@ -1,8 +1,5 @@
-import fs from 'fs';
-import path from 'path';
-import prettier from 'prettier';
 import collection from '../collection.json';
-import { traverse } from '../../utils';
+import { traverse, writeCollection } from '../../utils';
 
 traverse(collection, '', null, (children, key, parent) => {
   if (key === 'value') {
@@ -17,8 +14,4 @@ traverse(collection, '', null, (children, key, parent) => {
   }
 });
 
-prettier
-  .format(JSON.stringify(collection), { parser: 'json' })
-  .then((data) =>
-    fs.writeFileSync(path.resolve(__dirname, '../collection.json'), data),
-  );
+writeCollection(collection);

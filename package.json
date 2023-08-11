@@ -1,5 +1,8 @@
 {
-  "private": true,
+  "name": "braze-specification",
+  "version": "1.0.0-alpha",
+  "description": "Braze API specification.",
+  "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
     "build": "run-s migrations:postman postman-to-openapi migrations:openapi",
     "clean": "rm -rf .cache openapi",
@@ -8,8 +11,28 @@
     "migrations:openapi": "ts-node openapi/migrations",
     "migrations:postman": "ts-node postman/migrations",
     "postman-to-openapi": "p2o postman/collection.json --file openapi/spec.json --options postman-to-openapi.json",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "postpublish": "pinst --enable"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/braze-community/braze-specification"
+  },
+  "bugs": {
+    "url": "https://github.com/braze-community/braze-specification/issues"
+  },
+  "keywords": [
+    "braze",
+    "specification",
+    "api",
+    "rest",
+    "appboy",
+    "openapi",
+    "spec",
+    "postman",
+    "collection",
+    "json"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
@@ -22,5 +45,10 @@
     "prettier": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
-  }
+  },
+  "files": [
+    "openapi/spec.json",
+    "postman/collection.json"
+  ],
+  "license": "MIT"
 }

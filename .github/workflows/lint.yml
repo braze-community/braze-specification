@@ -1,0 +1,25 @@
+name: lint
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version-file: .nvmrc
+
+      - name: Install dependencies
+        run: npm install --prefer-offline
+
+      - name: Lint OpenAPI spec
+        run: npm run lint
+
+      - name: Type check
+        run: npm run lint:tsc

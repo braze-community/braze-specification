@@ -771,7 +771,7 @@
                     },
                     {
                       "key": "include_archived",
-                      "value": "false",
+                      "value": false,
                       "description": "(Optional) Boolean\n\nWhether or not to include archived campaigns, defaults to false."
                     },
                     {
@@ -877,17 +877,17 @@
                     },
                     {
                       "key": "include_variant_breakdown",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include variant stats (defaults to false)."
                     },
                     {
                       "key": "include_step_breakdown",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include step stats (defaults to false)."
                     },
                     {
                       "key": "include_deleted_step_data",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include step stats for deleted steps (defaults to false)."
                     }
                   ]
@@ -935,17 +935,17 @@
                     },
                     {
                       "key": "include_variant_breakdown",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include variant stats (defaults to false)."
                     },
                     {
                       "key": "include_step_breakdown",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include step stats (defaults to false)."
                     },
                     {
                       "key": "include_deleted_step_data",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include step stats for deleted steps (defaults to false)."
                     }
                   ]
@@ -1006,7 +1006,7 @@
                     },
                     {
                       "key": "include_archived",
-                      "value": "false",
+                      "value": false,
                       "description": "(Optional) Boolean\n\nWhether or not to include archived Canvases, defaults to `false`."
                     },
                     {
@@ -1368,7 +1368,7 @@
                     },
                     {
                       "key": "include_archived",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include archived cards, defaults to false."
                     },
                     {
@@ -3014,7 +3014,7 @@
                     },
                     {
                       "key": "include_inclusion_data",
-                      "value": "false",
+                      "value": false,
                       "description": "(Optional) Boolean\n\nWhen set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this content block is included, to be used in subsequent calls. The results exclude archived or deleted Campaigns or Canvases."
                     }
                   ]

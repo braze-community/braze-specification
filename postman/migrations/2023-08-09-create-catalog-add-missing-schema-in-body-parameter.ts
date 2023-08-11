@@ -1,34 +1,23 @@
-// @ts-nocheck
 import collection from '../collection.json';
-import { writeCollection } from '../../utils';
+import { traverse, writeCollection } from '../../utils';
 
-const catalogs = collection.item.find(({ name }) => name === 'Catalogs');
+traverse(collection, '', null, (value, key, parent) => {
+  if (key === 'name' && value === 'Create Catalog') {
+    const body = {
+      catalogs: [
+        {
+          name: 'restaurants',
+          description: 'My Restaurants',
+          fields: [{ name: 'id', type: 'string' }],
+        },
+      ],
+    };
 
-const catalogManagement = catalogs.item.find(
-  ({ name }: { name: string }) => name === 'Catalog Management',
-);
-
-const synchronous = catalogManagement.item.find(
-  ({ name }) => name === 'Synchronous',
-);
-
-const createCatalog = synchronous.item.find(
-  ({ name }) => name === 'Create Catalog',
-);
-
-const body = {
-  catalogs: [
-    {
-      name: 'restaurants',
-      description: 'My Restaurants',
-      fields: [{ name: 'id', type: 'string' }],
-    },
-  ],
-};
-
-createCatalog.request.body = {
-  mode: 'raw',
-  raw: JSON.stringify(body, null, 2),
-};
+    parent.request.body = {
+      mode: 'raw',
+      raw: JSON.stringify(body, null, 2),
+    };
+  }
+});
 
 writeCollection(collection);

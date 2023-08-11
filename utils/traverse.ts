@@ -1,6 +1,6 @@
-type Children = unknown;
+type Children = any;
 type Key = string | number;
-type Parent = Children;
+type Parent = any;
 type Replacer = (children: Children, key?: Key, parent?: Parent) => void;
 
 /**

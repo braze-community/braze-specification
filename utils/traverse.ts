@@ -13,19 +13,19 @@ export function traverse(
   replacer: Replacer,
 ): void {
   if (Array.isArray(children)) {
-    return children.forEach((value, index) =>
-      traverse(value, index, children, replacer),
-    );
+    return children.forEach((value, key) => {
+      replacer(value, key, children);
+      traverse(value, key, children, replacer);
+    });
   }
 
   if (children instanceof Object) {
     return Object.keys(children).forEach((key) => {
       const value = (children as Record<Key, Children>)[key];
+      replacer(value, key, children);
       traverse(value, key, children, replacer);
     });
   }
 
-  if (typeof replacer === 'function') {
-    replacer(children, key, parent);
-  }
+  replacer(children, key, parent);
 }

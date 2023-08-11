@@ -3,9 +3,9 @@ import { traverse, writeCollection } from '../../utils';
 
 const regex = /^\d+$/;
 
-traverse(collection, '', null, (children, key, parent) => {
-  if (key === 'value' && regex.test(children)) {
-    parent[key] = parseInt(children, 10);
+traverse(collection, '', null, (value, key, parent) => {
+  if (key === 'value' && regex.test(value)) {
+    parent[key] = parseInt(value, 10);
   }
 });
 

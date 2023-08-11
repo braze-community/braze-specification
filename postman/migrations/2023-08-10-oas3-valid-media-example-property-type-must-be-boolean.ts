@@ -1,9 +1,9 @@
 import collection from '../collection.json';
 import { traverse, writeCollection } from '../../utils';
 
-traverse(collection, '', null, (children, key, parent) => {
+traverse(collection, '', null, (value, key, parent) => {
   if (key === 'value') {
-    switch (children) {
+    switch (value) {
       case 'true':
         parent[key] = true;
         break;

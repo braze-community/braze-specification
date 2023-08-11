@@ -1,15 +1,21 @@
 {
+  "private": true,
   "scripts": {
     "build": "run-s migrations postman-to-openapi",
     "clean": "rm -rf .cache openapi",
     "lint": "spectral lint openapi/spec.json --display-only-failures",
     "lint:tsc": "tsc --noEmit",
     "migrations": "ts-node postman/migrations",
-    "postman-to-openapi": "p2o postman/collection.json --file openapi/spec.json --options postman-to-openapi.json"
+    "postman-to-openapi": "p2o postman/collection.json --file openapi/spec.json --options postman-to-openapi.json",
+    "postinstall": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@stoplight/spectral-cli": "^6.10.1",
+    "husky": "^8.0.3",
     "npm-run-all": "^4.1.5",
+    "pinst": "^3.0.0",
     "postman-to-openapi": "^3.0.1",
     "prettier": "^3.0.1",
     "ts-node": "^10.9.1",

@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "build": "run-s migrations postman-to-openapi",
+    "build": "run-s migrations:postman postman-to-openapi migrations:openapi",
     "clean": "rm -rf .cache openapi",
     "lint": "spectral lint openapi/spec.json --display-only-failures",
     "lint:tsc": "tsc --noEmit",
-    "migrations": "ts-node postman/migrations",
+    "migrations:openapi": "ts-node openapi/migrations",
+    "migrations:postman": "ts-node postman/migrations",
     "postman-to-openapi": "p2o postman/collection.json --file openapi/spec.json --options postman-to-openapi.json",
     "postinstall": "husky install"
   },

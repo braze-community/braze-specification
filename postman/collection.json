@@ -461,12 +461,12 @@
                 },
                 {
                   "key": "limit",
-                  "value": "100",
+                  "value": 100,
                   "description": "(Optional) Integer\n\nOptional field to limit the number of results returned. Defaults to 100, maximum is 500."
                 },
                 {
                   "key": "offset",
-                  "value": "1",
+                  "value": 1,
                   "description": "(Optional) Integer\n\nOptional beginning point in the list to retrieve from."
                 },
                 {
@@ -510,12 +510,12 @@
                 },
                 {
                   "key": "limit",
-                  "value": "1",
+                  "value": 1,
                   "description": "(Optional) Integer\n\nOptional field to limit the number of results returned. Limit must be greater than 1. Defaults to 100, maximum is 500."
                 },
                 {
                   "key": "offset",
-                  "value": "1",
+                  "value": 1,
                   "description": "(Optional) Integer \n\nOptional beginning point in the list to retrieve from."
                 },
                 {
@@ -705,7 +705,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "7",
+                      "value": 7,
                       "description": "(Required) Integer\n\nMax number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -766,7 +766,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "0",
+                      "value": 0,
                       "description": "(Optional) Integer\n\nThe page of campaigns to return, defaults to 0 (returns the first set of up to 100)."
                     },
                     {
@@ -819,7 +819,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "30",
+                      "value": 30,
                       "description": "(Required) Integer\n\nMax number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -872,7 +872,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "10",
+                      "value": 10,
                       "description": "(Optional*) String\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive).\n\n*Either `length` or `starting_at` is required."
                     },
                     {
@@ -930,7 +930,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "5",
+                      "value": 5,
                       "description": "(Optional*) Integer\n\nMax number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive).\n\n*Either `length` or `starting_at` is required."
                     },
                     {
@@ -1001,7 +1001,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nThe page of Canvases to return, defaults to `0` (returns the first set of up to 100)."
                     },
                     {
@@ -1049,7 +1049,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "3",
+                      "value": 3,
                       "description": "(Optional) Integer\n\nThe page of event names to return, defaults to 0 (returns the first set of up to 250)."
                     }
                   ]
@@ -1082,7 +1082,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "24",
+                      "value": 24,
                       "description": "(Required) Integer\n\nMaximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1135,7 +1135,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1173,7 +1173,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "10",
+                      "value": 10,
                       "description": "(Required) Integer\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1211,7 +1211,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "7",
+                      "value": 7,
                       "description": "(Required) Integer\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1249,7 +1249,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1297,7 +1297,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMax number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1363,7 +1363,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nThe page of cards to return, defaults to 0 (returns the first set of up to 100)."
                     },
                     {
@@ -1406,7 +1406,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nThe page of your product list that you would like to view."
                     }
                   ]
@@ -1439,12 +1439,12 @@
                     },
                     {
                       "key": "length",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Required) Integer\nMaximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
                       "key": "unit",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Optional) String\nUnit of time between data points. Can be `day` or `hour`, defaults to `day`. "
                     },
                     {
@@ -1487,12 +1487,12 @@
                     },
                     {
                       "key": "length",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Required) Integer\nMaximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
                       "key": "unit",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Optional) String\nUnit of time between data points. Can be `day` or `hour`, defaults to `day`. "
                     },
                     {
@@ -1531,7 +1531,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nThe page of segments to return, defaults to 0 (returns the first set of up to 100)."
                     },
                     {
@@ -1569,7 +1569,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMax number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1635,7 +1635,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMax number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -2591,17 +2591,17 @@
                 },
                 {
                   "key": "limit",
-                  "value": "100",
+                  "value": 100,
                   "description": "(Optional) Integer\nOptional field to limit the number of results returned. Defaults to 100, maximum is 500."
                 },
                 {
                   "key": "offset",
-                  "value": "1",
+                  "value": 1,
                   "description": "(Optional) Integer\nOptional beginning point in the list to retrieve from."
                 },
                 {
                   "key": "phone_numbers",
-                  "value": "12345678901",
+                  "value": 12345678901,
                   "description": "(Optional*) Array of Strings in e.164 format\nIf provided, we will return the phone number if it has been found to be invalid.\n"
                 }
               ]
@@ -2716,12 +2716,12 @@
                     },
                     {
                       "key": "limit",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Optional) Integer\n\nThe limit on the maximum number of results returned. Default (and max) limit is 100."
                     },
                     {
                       "key": "offset",
-                      "value": "0",
+                      "value": 0,
                       "description": "(Optional) Integer\n\nNumber of templates to skip before returning rest of the templates that fit the search criteria."
                     }
                   ]
@@ -2857,12 +2857,12 @@
                     },
                     {
                       "key": "limit",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Optional) Integer\n\nThe limit on the maximum number of results returned. Default (and max) limit is 100."
                     },
                     {
                       "key": "offset",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\n\tNumber of templates to skip before returning the rest of the templates that fit the search criteria."
                     },
                     {
@@ -2976,12 +2976,12 @@
                     },
                     {
                       "key": "limit",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Optional) Positive Number\n\nMaximum number of content blocks to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000."
                     },
                     {
                       "key": "offset",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Positive Number\n\nNumber of content blocks to skip before returning rest of the templates that fit the search criteria."
                     }
                   ]
@@ -3124,12 +3124,12 @@
                     },
                     {
                       "key": "limit",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Positive Number\n\nMaximum number of templates to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000."
                     },
                     {
                       "key": "offset",
-                      "value": "0",
+                      "value": 0,
                       "description": "(Optional) Positive Number\n\nNumber of templates to skip before returning rest of the templates that fit the search criteria."
                     }
                   ]

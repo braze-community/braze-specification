@@ -6,6 +6,9 @@
 
 Braze API specification. See [Postman collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG).
 
+- [openapi/spec.json](openapi/spec.json)
+- [postman.collection.json](postman.collection.json)
+
 ## License
 
 [MIT](LICENSE)

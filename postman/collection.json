@@ -483,9 +483,7 @@
         {
           "name": "Query List of Unsubscribed Email Addresses",
           "request": {
-            "auth": {
-              "type": "noauth"
-            },
+            "auth": { "type": "noauth" },
             "method": "GET",
             "header": [
               {
@@ -541,10 +539,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "type": "text",
@@ -570,10 +565,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "type": "text",
@@ -599,10 +591,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "type": "text",
@@ -1532,10 +1521,7 @@
               "request": {
                 "method": "GET",
                 "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{api_key}}"
-                  }
+                  { "key": "Authorization", "value": "Bearer {{api_key}}" }
                 ],
                 "url": {
                   "raw": "https://{{instance_url}}/segments/list?page=1&sort_direction=desc",
@@ -1719,10 +1705,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "type": "text",
@@ -1780,17 +1763,11 @@
       "event": [
         {
           "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "exec": [""]
-          }
+          "script": { "type": "text/javascript", "exec": [""] }
         },
         {
           "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [""]
-          }
+          "script": { "type": "text/javascript", "exec": [""] }
         }
       ]
     },
@@ -1913,11 +1890,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"canvas_id\": \"canvas_identifier\",\n  \"schedule_id\": \"schedule_identifier\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
+                  "options": { "raw": { "language": "json" } }
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/canvas/trigger/schedule/delete",
@@ -1968,11 +1941,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"broadcast\": \"false\",\n  \"external_user_ids\": \"external_user_identifiers\",\n  \"user_aliases\": {\n    \"alias_name\" : \"example_name\",\n    \"alias_label\" : \"example_label\"\n  },\n  \"segment_id\": \"segment_identifiers\",\n  \"audience\": {\n    \"AND\": [\n      {\n        \"custom_attribute\": {\n          \"custom_attribute_name\": \"eye_color\",\n          \"comparison\": \"equals\",\n          \"value\": \"blue\"\n        }\n      },\n      {\n        \"custom_attribute\": {\n          \"custom_attribute_name\": \"favorite_foods\",\n          \"comparison\": \"includes_value\",\n          \"value\": \"pizza\"\n        }\n      },\n      {\n        \"OR\": [\n          {\n            \"custom_attribute\": {\n              \"custom_attribute_name\": \"last_purchase_time\",\n              \"comparison\": \"less_than_x_days_ago\",\n              \"value\": 2\n            }\n          },\n          {\n            \"push_subscription_status\": {\n              \"comparison\": \"is\",\n              \"value\": \"opted_in\"\n            }\n          }\n        ]\n      },\n      {\n        \"email_subscription_status\": {\n          \"comparison\": \"is_not\",\n          \"value\": \"subscribed\"\n        }\n      },\n      {\n        \"last_used_app\": {\n          \"comparison\": \"after\",\n          \"value\": \"2019-07-22T13:17:55+0000\"\n        }\n      }\n    ]\n  },\n  \"campaign_id\": \"campaign_identifier\",\n  \"send_id\": \"send_identifier\",\n  \"override_messaging_limits\": false,\n  \"recipient_subscription_state\": \"subscribed\",\n  \"schedule\": {\n    \"time\": \"\",\n    \"in_local_time\": true,\n    \"at_optimal_time\": true\n  },\n  \"messages\": {\n    \"apple_push\": (optional, Apple Push Object),\n    \"android_push\": (optional, Android Push Object),\n    \"windows_push\": (optional, Windows Phone 8 Push Object),\n    \"windows8_push\": (optional, Windows Universal Push Object),\n    \"kindle_push\": (optional, Kindle/FireOS Push Object),\n    \"web_push\": (optional, Web Push Object),\n    \"email\": (optional, Email object)\n    \"webhook\": (optional, Webhook object)\n    \"content_card\": (optional, Content Card Object)\n  }\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
+                  "options": { "raw": { "language": "json" } }
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/messages/schedule/create",
@@ -1989,10 +1958,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2018,10 +1984,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2047,10 +2010,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "type": "text",
@@ -2076,10 +2036,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "type": "text",
@@ -2141,10 +2098,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "type": "text",
@@ -2200,10 +2154,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "type": "text",
@@ -2235,10 +2186,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "type": "text",
@@ -2264,10 +2212,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "type": "text",
@@ -2505,12 +2450,7 @@
               "protocol": "https",
               "host": ["{{instance_url}}"],
               "path": ["scim", "v2", "Users"],
-              "query": [
-                {
-                  "key": "filter",
-                  "value": "{userName@example.com}"
-                }
-              ]
+              "query": [{ "key": "filter", "value": "{userName@example.com}" }]
             },
             "description": "> This endpoint allows you to look up an existing dashboard user account by specifying their email in the filter query parameter.  \n \n  \n\nNote that when the query parameter is URL encoded it will read like this:\n\n`/scim/v2/Users?filter=userName eq \"user@test.com\"`\n\nFor information on how to obtain a SCIM token, visit [Automated user provisioning](https://www.braze.com/docs/scim/automated_user_provisioning/).\n\n## Rate limit\n\nThis endpoint has a rate limit of 5000 requests per day, per company. This rate limit is shared with the `/scim/v2/Users/` PUT, GET, DELETE, and POST endpoints as documented in [API rate limits](https://www.braze.com/docs/api/api_limits/).\n\n## Path parameters\n\n| Parameter | Required | Data Type | Description |\n| --- | --- | --- | --- |\n| `userName@example.com` | Required | String | The user's email. |\n\n## Request parameters\n\nThere is no request body for this endpoint.\n\n## Response\n\n``` json\nContent-Type: application/json\nX-Request-Origin: YOUR-REQUEST-ORIGIN-HERE\nAuthorization: Bearer YOUR-SCIM-TOKEN-HERE\n{\n    \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"],\n    \"totalResults\": 1,\n    \"Resources\": [\n        {\n            \"userName\": \"user@test.com\",\n            \"id\": \"dfa245b7-24195aec-887bb3ad-602b3340\",\n            \"name\": {\n                \"givenName\": \"Test\",\n                \"familyName\": \"User\"\n            },\n            \"department\": \"finance\",\n            \"lastSignInAt\": \"Thursday, January 1, 1970 12:00:00 AM\",\n            \"permissions\": {\n                \"companyPermissions\": [\"manage_company_settings\"],\n                \"appGroup\": [\n                    {\n                        \"appGroupId\": \"241adcd25789fabcded\",\n                        \"appGroupName\": \"Test App Group\",\n                        \"appGroupPermissions\": [\"basic_access\",\"send_campaigns_canvases\"],\n                        \"team\": [\n                            {\n                                \"teamId\": \"241adcd25789fabcded\",\n                                \"teamName\": \"Test Team\",                  \n                                \"teamPermissions\": [\"admin\"]\n                            }\n                        ]\n                    } \n                ]\n            }\n        }\n    ]\n}\n\n```"
           },
@@ -3118,10 +3058,7 @@
               "event": [
                 {
                   "listen": "prerequest",
-                  "script": {
-                    "exec": [""],
-                    "type": "text/javascript"
-                  }
+                  "script": { "exec": [""], "type": "text/javascript" }
                 }
               ],
               "request": {
@@ -3397,10 +3334,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "type": "text",
@@ -3426,10 +3360,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "type": "text",
@@ -3455,10 +3386,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "type": "text",
@@ -3484,10 +3412,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "type": "text",
@@ -3503,13 +3428,7 @@
               "protocol": "https",
               "host": ["sondheim", "appboy", "com"],
               "path": ["users", "track"],
-              "query": [
-                {
-                  "key": "",
-                  "value": "",
-                  "disabled": true
-                }
-              ]
+              "query": [{ "key": "", "value": "", "disabled": true }]
             },
             "description": "> Use this endpoint to record custom events, purchases, and update user profile attributes. \n  \n\nTo use this endpoint, you’ll need to generate an API key with the `users.track` permission.\n\n**Note:** Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points#data-points).\n\nCustomers using the API for server-to-server calls may need to allowlist `rest.iad-01.braze.com` if they’re behind a firewall.\n\n### Rate limit\n\nWe apply a base speed limit of 50,000 requests per minute to this endpoint for all customers. Each request to the `/users/track` endpoint can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each for a max of 225 individual data points. Each update can also belong to the same user for a max of 225 updates to a single user in a request.\n\nSee our page on [API rate limits](https://www.braze.com/docs/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.\n\n### Request parameters\n\nFor each of the request components listed in the following table, one of `external_id`, `user_alias`, or `braze_id` is required.\n\n| Parameter | Required | Data Type | Description |\n| --- | --- | --- | --- |\n| `attributes` | Optional | Array of attributes objects | See [user attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object/) |\n| `events` | Optional | Array of event objects | See [events object](https://www.braze.com/docs/api/objects_filters/event_object/) |\n| `purchases` | Optional | Array of purchase objects | See [purchases object](https://www.braze.com/docs/api/objects_filters/purchase_object/) |\n\n## User track responses\n\nUpon using any of the aforementioned API requests you should receive one of the following three general responses:\n\n#### Successful message\n\nSuccessful messages will be met with the following response:\n\n``` json\n{\n  \"message\" : \"success\",\n  \"attributes_processed\" : (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,\n  \"events_processed\" : (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,\n  \"purchases_processed\" : (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,\n}\n\n```\n\n#### Successful message with non-fatal errors\n\nIf your message is successful but has non-fatal errors such as one invalid event object out of a long list of events, then you will receive the following response:\n\n``` json\n{\n  \"message\" : \"success\",\n  \"errors\" : [\n    {\n    }\n  ]\n}\n\n```\n\n#### Message with fatal errors\n\nIn the case of a success, any data that was not affected by an error in the `errors` array will still be processed. If your message has a fatal error you will receive the following response:\n\n``` json\n{\n  \"message\" : ,\n  \"errors\" : [\n    {\n    }\n  ]\n}\n\n```\n\n### Fatal error response codes\n\nFor status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors & responses](https://www.braze.com/api/errors/#fatal-errors).\n\nIf you receive the error “provided external_id is blacklisted and disallowed”, your request may have included a “dummy user”. For more information, refer to [Spam blocking](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).\n\n### Creating an alias-only user profile\n\nKeep the following nuances in mind when using the `/users/track` endpoint:\n\nYou can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If this value is omitted, the alias-only user profile will not be created. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents the creation of duplicate user profiles.\n\n### Importing legacy user data\n\nYou may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.\n\nThe segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app, simply add the filter: `Session Count > 0`.\n\n### Making bulk updates\n\nIf you have a use case where you need to make batch updates to the `users/track` endpoint, we recommend adding the bulk update header so that Braze can properly identify, observe, and route your request.\n\nRefer to the following sample request with the `X-Braze-Bulk` header:\n\n``` json\ncurl --location --request POST 'https://rest.iad-01.braze.com/users/track' \\\n--header 'Content-Type: application/json' \\\n--header 'X-Braze-Bulk: true' \\\n--header 'Authorization: Bearer YOUR-API-KEY-HERE' \\\n--data-raw '{ \"attributes\": [ ], \"events\": [ ], \"purchases\": [ ] }'\n\n```\n\nWarning: When the `X-Braze-Bulk` header is present with any value, Braze will consider the request a bulk request. Set the value to `true`. Currently, setting the value to `false` does not disable the header—it will still be treated as if it were true.\n\n#### Use cases\n\nConsider the following use cases where you may use the bulk update header:\n\n- A daily job where multiple users’ custom attributes are updated via the `/users/track` endpoint.\n- An ad-hoc user data backfill script which updates user information via the `/users/track` endpoint."
           },
@@ -3552,17 +3471,8 @@
   "event": [
     {
       "listen": "prerequest",
-      "script": {
-        "type": "text/javascript",
-        "exec": [""]
-      }
+      "script": { "type": "text/javascript", "exec": [""] }
     },
-    {
-      "listen": "test",
-      "script": {
-        "type": "text/javascript",
-        "exec": [""]
-      }
-    }
+    { "listen": "test", "script": { "type": "text/javascript", "exec": [""] } }
   ]
 }

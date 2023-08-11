@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npm run migrations && npm run postman-to-openapi",
+    "build": "run-s migrations postman-to-openapi",
     "clean": "rm -rf .cache openapi",
     "lint": "spectral lint openapi/spec.json --display-only-failures",
     "lint:tsc": "tsc --noEmit",

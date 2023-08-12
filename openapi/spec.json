@@ -48,6 +48,65 @@
     }
   ],
   "components": {
+    "responses": {
+      "BadRequest": {
+        "description": "400 Bad Request",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/Error" }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "401 Unauthorized",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/Error" }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "403 Forbidden",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/Error" }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "404 Not Found",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/Error" }
+          }
+        }
+      },
+      "TooManyRequests": {
+        "description": "429 Rate Limited",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/Error" }
+          }
+        }
+      },
+      "InternalServerError": {
+        "description": "500 Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/Error" }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "message": { "type": "string" },
+          "errors": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
     "securitySchemes": { "BearerAuth": { "type": "http", "scheme": "bearer" } }
   },
   "tags": [
@@ -152,8 +211,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -238,8 +305,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -271,8 +346,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -298,8 +381,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "post": {
@@ -341,8 +432,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -374,8 +473,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "patch": {
@@ -415,8 +522,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "post": {
@@ -468,8 +583,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "put": {
@@ -521,8 +644,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "get": {
@@ -552,8 +683,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -591,8 +730,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "get": {
@@ -628,8 +775,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "patch": {
@@ -683,8 +838,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "post": {
@@ -741,8 +904,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "put": {
@@ -800,8 +971,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -856,8 +1035,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -919,8 +1106,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -959,8 +1154,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -996,8 +1199,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1033,8 +1244,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1070,8 +1289,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1107,8 +1334,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1149,8 +1384,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1177,8 +1420,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1224,8 +1475,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1273,8 +1532,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1343,8 +1610,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1413,8 +1688,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1441,8 +1724,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1489,8 +1780,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1517,8 +1816,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1580,8 +1887,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1622,8 +1937,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1664,8 +1987,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1706,8 +2037,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1748,8 +2087,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1797,8 +2144,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1825,8 +2180,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1867,8 +2230,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1895,8 +2266,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -1951,8 +2330,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2007,8 +2394,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2042,8 +2437,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2084,8 +2487,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2112,8 +2523,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2168,8 +2587,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2218,8 +2645,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2260,8 +2695,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2301,8 +2744,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2351,8 +2802,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2379,8 +2838,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2416,8 +2883,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2456,8 +2931,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2496,8 +2979,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2594,8 +3085,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2695,8 +3194,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2796,8 +3303,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2849,8 +3364,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2893,8 +3416,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2937,8 +3468,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -2977,8 +3516,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3083,8 +3630,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3135,8 +3690,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3236,8 +3799,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3340,8 +3911,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3386,8 +3965,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3407,8 +3994,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3434,8 +4029,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "put": {
@@ -3484,8 +4087,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3528,8 +4139,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3567,8 +4186,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "get": {
@@ -3604,8 +4231,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "put": {
@@ -3673,8 +4308,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3712,8 +4355,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       },
       "post": {
@@ -3779,8 +4430,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3835,8 +4494,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3872,8 +4539,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3914,8 +4589,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -3963,8 +4646,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4005,8 +4696,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4050,8 +4749,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4099,8 +4806,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4133,8 +4848,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4176,8 +4899,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4220,8 +4951,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4268,8 +5007,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4296,8 +5043,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4340,8 +5095,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4384,8 +5147,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4423,8 +5194,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4468,8 +5247,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4513,8 +5300,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4566,8 +5361,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4613,8 +5416,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     },
@@ -4671,8 +5482,16 @@
         "responses": {
           "200": {
             "description": "Successful response",
-            "content": { "application/json": {} }
-          }
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalServerError" }
         }
       }
     }

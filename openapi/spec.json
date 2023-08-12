@@ -3900,43 +3900,6 @@
           }
         }
       }
-    },
-    "/v2/subscription/status/set ": {
-      "post": {
-        "tags": ["Subscription Groups > Email"],
-        "summary": "Update User's Subscription Group Status V2",
-        "description": "> Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard. \n  \n\nTo use this endpoint, you’ll need to generate an API key with the `subscription.status.set` permission.\n\nYou can access a subscription group’s `subscription_group_id` by navigating to the **Subscriptions Group** page.\n\nTip: When creating new users via the [`/users/track` endpoint](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/), you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.\n\n\\*`email` or `external_id` is required\n\n### Rate Limit\n\nFor customers who onboarded with Braze on or after January 6, 2022, we apply a rate limit of 5,000 requests per minute shared across the `/subscription/status/set` and `/v2/subscription/status/set` endpoint as documented in [API rate limits](http://localhost:4000/docs/api/api_limits/).\n\n### Request parameters\n\n## Request parameters\n\n| Parameter | Required | Data Type | Description |\n| --- | --- | --- | --- |\n| `subscription_group_id` | Required | String | The `id` of your subscription group. |\n| `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |\n| `external_ids` | Required\\* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |\n| `emails` | Required\\* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50).  <br>  <br>If multiple users (`external_id`) in the same app group share the same email address, all users that share the email address are updated with the subscription group changes. |\n\n### Example successful response\n\nResponse: (status 201)\n\n``` json\n{\n    \"message\": \"success\"\n}\n\n```",
-        "requestBody": {
-          "content": {
-            "*/*": {
-              "schema": {
-                "type": "string",
-                "example": "\"\\\"subscription_groups\\\":[\\n    {\\n      \\\"subscription_group_id\\\":\\\"subscription_group_identifier\\\",\\n      \\\"subscription_state\\\":\\\"subscribed\\\",\\n      \\\"emails\\\":[\\\"example1@email.com\\\",\\\"example2@email.com\\\"]\\n    }\\n  ]\""
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": { "type": "string" },
-            "example": "application/json"
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "schema": { "type": "string" },
-            "example": "Bearer {{api_key}}"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": { "application/json": {} }
-          }
-        }
-      }
     }
   },
   "security": [{ "BearerAuth": [] }]

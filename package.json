@@ -1,6 +1,6 @@
 {
   "name": "braze-specification",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Braze API specification.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {

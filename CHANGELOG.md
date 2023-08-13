@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.1](https://github.com/braze-community/braze-specification/compare/v1.0.0...v1.0.1) (2023-08-13)
+
+
+### Bug Fixes
+
+* **openapi:** add migration to fix security scheme ([3613805](https://github.com/braze-community/braze-specification/commit/3613805165d3b9f9acb1e345b9d7987d7d877e38))
+* **openapi:** add migration to fix servers ([725f4a8](https://github.com/braze-community/braze-specification/commit/725f4a8be731dc58741335cab1b7247101e9625e))
+* **openapi:** add migrations to fix request body ([81efba7](https://github.com/braze-community/braze-specification/commit/81efba7558728becc26cd3a35f0595abec9620b3))
+* **openapi:** create migration to add responses ([c946354](https://github.com/braze-community/braze-specification/commit/c9463541e2348d7d87e18fdc3822a1570fea2e0b))
+* **postman:** add migration to delete duplicate url ([29c9d9d](https://github.com/braze-community/braze-specification/commit/29c9d9d3d4b741d79396437e299d784bf1bd4ccb))
+
 ## 1.0.0 (2023-08-11)
 
 

@@ -7,10 +7,12 @@
 [![commitlint](https://github.com/braze-community/braze-specification/actions/workflows/commitlint.yml/badge.svg)](https://github.com/braze-community/braze-specification/actions/workflows/commitlint.yml)
 [![lint](https://github.com/braze-community/braze-specification/actions/workflows/lint.yml/badge.svg)](https://github.com/braze-community/braze-specification/actions/workflows/lint.yml)
 
-Braze API specification. See [Postman collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG).
+Braze API specification:
 
-- [openapi/spec.json](https://github.com/braze-community/braze-specification/blob/master/openapi/spec.json)
-- [postman.collection.json](https://github.com/braze-community/braze-specification/blob/master/postman/collection.json)
+- [OpenAPI spec](https://github.com/braze-community/braze-specification/blob/master/openapi/spec.json)
+- [Postman collection](https://github.com/braze-community/braze-specification/blob/master/postman/collection.json)
+
+See the original [Postman collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG).
 
 ## Installation
 

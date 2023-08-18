@@ -189,6 +189,15 @@
                   "plaintext_body": "This is the updated text within my email body and here is a link to https://www.braze.com/.",
                   "preheader": "We want you to have the best looks this Summer",
                   "tags": ["Tag1", "Tag2"]
+                },
+                "properties": {
+                  "email_template_id": { "type": "string" },
+                  "template_name": { "type": "string" },
+                  "subject": { "type": "string" },
+                  "body": { "type": "string" },
+                  "plaintext_body": { "type": "string" },
+                  "preheader": { "type": "string" },
+                  "tags": { "type": "array", "items": { "type": "string" } }
                 }
               }
             }
@@ -283,6 +292,50 @@
                       }
                     }
                   ]
+                },
+                "properties": {
+                  "attributes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "external_id": { "type": "string" },
+                        "string_attribute": { "type": "string" },
+                        "boolean_attribute_1": { "type": "boolean" },
+                        "integer_attribute": { "type": "integer" },
+                        "array_attribute": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  },
+                  "events": { "type": "array" },
+                  "purchases": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "external_id": { "type": "string" },
+                        "app_id": { "type": "string" },
+                        "product_id": { "type": "string" },
+                        "currency": { "type": "string" },
+                        "price": { "type": "number" },
+                        "quantity": { "type": "integer" },
+                        "time": { "type": "string" },
+                        "properties": {
+                          "type": "object",
+                          "properties": {
+                            "color": { "type": "string" },
+                            "monogram": { "type": "string" },
+                            "checkout_duration": { "type": "integer" },
+                            "size": { "type": "string" },
+                            "brand": { "type": "string" }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -410,6 +463,28 @@
                       "fields": [{ "name": "id", "type": "string" }]
                     }
                   ]
+                },
+                "properties": {
+                  "catalogs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": { "type": "string" },
+                        "description": { "type": "string" },
+                        "fields": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "name": { "type": "string" },
+                              "type": { "type": "string" }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -494,7 +569,16 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "example": { "items": [{ "id": "restaurant1" }] }
+                "example": { "items": [{ "id": "restaurant1" }] },
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": { "id": { "type": "string" } }
+                    }
+                  }
+                }
               }
             }
           }
@@ -555,6 +639,23 @@
                       "Created_At": "2022-11-01T09:03:19.967+00:00"
                     }
                   ]
+                },
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": { "type": "string" },
+                        "Name": { "type": "string" },
+                        "City": { "type": "string" },
+                        "Cuisine": { "type": "string" },
+                        "Rating": { "type": "integer" },
+                        "Loyalty_Program": { "type": "boolean" },
+                        "Created_At": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -616,6 +717,26 @@
                       "Open_Time": "2021-09-03T09:03:19.967+00:00"
                     }
                   ]
+                },
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "Name": { "type": "string" },
+                        "Loyalty_Program": { "type": "boolean" },
+                        "Location": {
+                          "type": "object",
+                          "properties": {
+                            "Latitude": { "type": "number" },
+                            "Longitude": { "type": "number" }
+                          }
+                        },
+                        "Open_Time": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -804,6 +925,19 @@
                       "Open_Time": "2021-09-03T09:03:19.967+00:00"
                     }
                   ]
+                },
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "Name": { "type": "string" },
+                        "Loyalty_Program": { "type": "boolean" },
+                        "Open_Time": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -870,6 +1004,22 @@
                       "Created_At": "2022-11-01T09:03:19.967+00:00"
                     }
                   ]
+                },
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "Name": { "type": "string" },
+                        "City": { "type": "string" },
+                        "Cuisine": { "type": "string" },
+                        "Rating": { "type": "integer" },
+                        "Loyalty_Program": { "type": "boolean" },
+                        "Created_At": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -937,6 +1087,26 @@
                       "Open_Time": "2021-09-03T09:03:19.967+00:00"
                     }
                   ]
+                },
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "Name": { "type": "string" },
+                        "Loyalty_Program": { "type": "boolean" },
+                        "Location": {
+                          "type": "object",
+                          "properties": {
+                            "Latitude": { "type": "number" },
+                            "Longitude": { "type": "number" }
+                          }
+                        },
+                        "Open_Time": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -1132,6 +1302,10 @@
                 "example": {
                   "email": "example@braze.com",
                   "subscription_state": "subscribed"
+                },
+                "properties": {
+                  "email": { "type": "string" },
+                  "subscription_state": { "type": "string" }
                 }
               }
             }
@@ -1177,7 +1351,8 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "example": { "email": "example@braze.com" }
+                "example": { "email": "example@braze.com" },
+                "properties": { "email": { "type": "string" } }
               }
             }
           }
@@ -1222,7 +1397,8 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "example": { "email": "example@braze.com" }
+                "example": { "email": "example@braze.com" },
+                "properties": { "email": { "type": "string" } }
               }
             }
           }
@@ -1267,7 +1443,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "example": { "email": ["blocklist_email1", "blocklist_email2"] }
+                "example": {
+                  "email": ["blocklist_email1", "blocklist_email2"]
+                },
+                "properties": {
+                  "email": { "type": "array", "items": { "type": "string" } }
+                }
               }
             }
           }
@@ -1312,7 +1493,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "example": { "email": ["blacklist_email1", "blacklist_email2"] }
+                "example": {
+                  "email": ["blacklist_email1", "blacklist_email2"]
+                },
+                "properties": {
+                  "email": { "type": "array", "items": { "type": "string" } }
+                }
               }
             }
           }
@@ -2623,6 +2809,30 @@
                   "email_address": "example@braze.com",
                   "phone": "+11112223333",
                   "fields_to_export": ["first_name", "email", "purchases"]
+                },
+                "properties": {
+                  "external_ids": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "user_aliases": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "alias_name": { "type": "string" },
+                        "alias_label": { "type": "string" }
+                      }
+                    }
+                  },
+                  "device_id": { "type": "string" },
+                  "braze_id": { "type": "string" },
+                  "email_address": { "type": "string" },
+                  "phone": { "type": "string" },
+                  "fields_to_export": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
                 }
               }
             }
@@ -2673,6 +2883,15 @@
                   "callback_endpoint": "example_endpoint",
                   "fields_to_export": ["first_name", "email", "purchases"],
                   "output_format": "zip"
+                },
+                "properties": {
+                  "segment_id": { "type": "string" },
+                  "callback_endpoint": { "type": "string" },
+                  "fields_to_export": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "output_format": { "type": "string" }
                 }
               }
             }
@@ -2722,6 +2941,14 @@
                   "callback_endpoint": "",
                   "fields_to_export": ["email", "braze_id"],
                   "output_format": "zip"
+                },
+                "properties": {
+                  "callback_endpoint": { "type": "string" },
+                  "fields_to_export": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "output_format": { "type": "string" }
                 }
               }
             }
@@ -2778,6 +3005,32 @@
                     "alert": {
                       "body": "It's halftime! Let's look at the scores",
                       "title": "Halftime"
+                    }
+                  }
+                },
+                "properties": {
+                  "app_id": { "type": "string" },
+                  "activity_id": { "type": "string" },
+                  "content_state": {
+                    "type": "object",
+                    "properties": {
+                      "teamOneScore": { "type": "integer" },
+                      "teamTwoScore": { "type": "integer" }
+                    }
+                  },
+                  "end_activity": { "type": "boolean" },
+                  "dismissal_date": { "type": "string" },
+                  "stale_date": { "type": "string" },
+                  "notification": {
+                    "type": "object",
+                    "properties": {
+                      "alert": {
+                        "type": "object",
+                        "properties": {
+                          "body": { "type": "string" },
+                          "title": { "type": "string" }
+                        }
+                      }
                     }
                   }
                 }
@@ -2861,7 +3114,8 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "example": { "schedule_id": "schedule_identifier" }
+                "example": { "schedule_id": "schedule_identifier" },
+                "properties": { "schedule_id": { "type": "string" } }
               }
             }
           }
@@ -2909,6 +3163,10 @@
                 "example": {
                   "canvas_id": "canvas_identifier",
                   "schedule_id": "schedule_identifier"
+                },
+                "properties": {
+                  "canvas_id": { "type": "string" },
+                  "schedule_id": { "type": "string" }
                 }
               }
             }
@@ -2957,6 +3215,10 @@
                 "example": {
                   "campaign_id": "campaign_identifier",
                   "schedule_id": "schedule_identifier"
+                },
+                "properties": {
+                  "campaign_id": { "type": "string" },
+                  "schedule_id": { "type": "string" }
                 }
               }
             }
@@ -3077,6 +3339,48 @@
                     "webhook": {},
                     "content_card": {}
                   }
+                },
+                "properties": {
+                  "broadcast": { "type": "boolean" },
+                  "external_user_ids": { "type": "string" },
+                  "user_aliases": {
+                    "type": "object",
+                    "properties": {
+                      "alias_name": { "type": "string" },
+                      "alias_label": { "type": "string" }
+                    }
+                  },
+                  "segment_id": { "type": "string" },
+                  "audience": {
+                    "type": "object",
+                    "properties": { "AND": { "type": "array" } }
+                  },
+                  "campaign_id": { "type": "string" },
+                  "send_id": { "type": "string" },
+                  "override_messaging_limits": { "type": "boolean" },
+                  "recipient_subscription_state": { "type": "string" },
+                  "schedule": {
+                    "type": "object",
+                    "properties": {
+                      "time": { "type": "string" },
+                      "in_local_time": { "type": "boolean" },
+                      "at_optimal_time": { "type": "boolean" }
+                    }
+                  },
+                  "messages": {
+                    "type": "object",
+                    "properties": {
+                      "apple_push": { "type": "object" },
+                      "android_push": { "type": "object" },
+                      "windows_push": { "type": "object" },
+                      "windows8_push": { "type": "object" },
+                      "kindle_push": { "type": "object" },
+                      "web_push": { "type": "object" },
+                      "email": { "type": "object" },
+                      "webhook": { "type": "object" },
+                      "content_card": { "type": "object" }
+                    }
+                  }
                 }
               }
             }
@@ -3171,6 +3475,35 @@
                     "time": "",
                     "in_local_time": false,
                     "at_optimal_time": false
+                  }
+                },
+                "properties": {
+                  "campaign_id": { "type": "string" },
+                  "send_id": { "type": "string" },
+                  "recipients": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "user_alias": { "type": "string" },
+                        "external_user_id": { "type": "string" },
+                        "trigger_properties": { "type": "object" }
+                      }
+                    }
+                  },
+                  "audience": {
+                    "type": "object",
+                    "properties": { "AND": { "type": "array" } }
+                  },
+                  "broadcast": { "type": "boolean" },
+                  "trigger_properties": { "type": "object" },
+                  "schedule": {
+                    "type": "object",
+                    "properties": {
+                      "time": { "type": "string" },
+                      "in_local_time": { "type": "boolean" },
+                      "at_optimal_time": { "type": "boolean" }
+                    }
                   }
                 }
               }
@@ -3281,6 +3614,35 @@
                     "in_local_time": false,
                     "at_optimal_time": false
                   }
+                },
+                "properties": {
+                  "canvas_id": { "type": "string" },
+                  "recipients": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "user_alias": { "type": "string" },
+                        "external_user_id": { "type": "string" },
+                        "trigger_properties": { "type": "string" },
+                        "canvas_entry_properties": { "type": "object" }
+                      }
+                    }
+                  },
+                  "audience": {
+                    "type": "object",
+                    "properties": { "AND": { "type": "array" } }
+                  },
+                  "broadcast": { "type": "boolean" },
+                  "canvas_entry_properties": { "type": "object" },
+                  "schedule": {
+                    "type": "object",
+                    "properties": {
+                      "time": { "type": "string" },
+                      "in_local_time": { "type": "boolean" },
+                      "at_optimal_time": { "type": "boolean" }
+                    }
+                  }
                 }
               }
             }
@@ -3342,6 +3704,41 @@
                       "app_id": "app_identifier"
                     }
                   }
+                },
+                "properties": {
+                  "schedule_id": { "type": "string" },
+                  "schedule": {
+                    "type": "object",
+                    "properties": { "time": { "type": "string" } }
+                  },
+                  "messages": {
+                    "type": "object",
+                    "properties": {
+                      "apple_push": {
+                        "type": "object",
+                        "properties": {
+                          "alert": { "type": "string" },
+                          "badge": { "type": "integer" }
+                        }
+                      },
+                      "android_push": {
+                        "type": "object",
+                        "properties": {
+                          "title": { "type": "string" },
+                          "alert": { "type": "string" }
+                        }
+                      },
+                      "sms": {
+                        "type": "object",
+                        "properties": {
+                          "subscription_group_id": { "type": "string" },
+                          "message_variation_id": { "type": "string" },
+                          "body": { "type": "string" },
+                          "app_id": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -3393,6 +3790,17 @@
                   "schedule": {
                     "time": "2017-05-24T21:30:00Z",
                     "in_local_time": true
+                  }
+                },
+                "properties": {
+                  "campaign_id": { "type": "string" },
+                  "schedule_id": { "type": "string" },
+                  "schedule": {
+                    "type": "object",
+                    "properties": {
+                      "time": { "type": "string" },
+                      "in_local_time": { "type": "boolean" }
+                    }
                   }
                 }
               }
@@ -3446,6 +3854,17 @@
                     "time": "2017-05-24T21:30:00Z",
                     "in_local_time": true
                   }
+                },
+                "properties": {
+                  "canvas_id": { "type": "string" },
+                  "schedule_id": { "type": "string" },
+                  "schedule": {
+                    "type": "object",
+                    "properties": {
+                      "time": { "type": "string" },
+                      "in_local_time": { "type": "boolean" }
+                    }
+                  }
                 }
               }
             }
@@ -3494,6 +3913,10 @@
                 "example": {
                   "campaign_id": "campaign_identifier",
                   "send_id": "send_identifier"
+                },
+                "properties": {
+                  "campaign_id": { "type": "string" },
+                  "send_id": { "type": "string" }
                 }
               }
             }
@@ -3608,6 +4031,39 @@
                     "windows_phone8_push": "(optional, Windows Phone 8 Push Object)",
                     "windows_universal_push": "(optional, Windows Universal Push Object)"
                   }
+                },
+                "properties": {
+                  "broadcast": { "type": "string" },
+                  "external_user_ids": { "type": "string" },
+                  "user_aliases": {
+                    "type": "object",
+                    "properties": {
+                      "alias_name": { "type": "string" },
+                      "alias_label": { "type": "string" }
+                    }
+                  },
+                  "segment_id": { "type": "string" },
+                  "audience": {
+                    "type": "object",
+                    "properties": { "AND": { "type": "array" } }
+                  },
+                  "campaign_id": { "type": "string" },
+                  "send_id": { "type": "string" },
+                  "override_frequency_capping": { "type": "string" },
+                  "recipient_subscription_state": { "type": "string" },
+                  "messages": {
+                    "type": "object",
+                    "properties": {
+                      "android_push": { "type": "string" },
+                      "apple_push": { "type": "string" },
+                      "content_card": { "type": "string" },
+                      "email": { "type": "string" },
+                      "kindle_push": { "type": "string" },
+                      "web_push": { "type": "string" },
+                      "windows_phone8_push": { "type": "string" },
+                      "windows_universal_push": { "type": "string" }
+                    }
+                  }
                 }
               }
             }
@@ -3662,6 +4118,23 @@
                   "recipient": [
                     { "external_user_id": "TARGETED_USER_ID_STRING" }
                   ]
+                },
+                "properties": {
+                  "external_send_id": { "type": "string" },
+                  "trigger_properties": {
+                    "type": "object",
+                    "properties": {
+                      "example_string_property": { "type": "string" },
+                      "example_integer_property": { "type": "string" }
+                    }
+                  },
+                  "recipient": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": { "external_user_id": { "type": "string" } }
+                    }
+                  }
                 }
               }
             }
@@ -3777,6 +4250,38 @@
                       "attributes": { "first_name": "Alex" }
                     }
                   ]
+                },
+                "properties": {
+                  "campaign_id": { "type": "string" },
+                  "send_id": { "type": "string" },
+                  "trigger_properties": { "type": "string" },
+                  "broadcast": { "type": "boolean" },
+                  "audience": {
+                    "type": "object",
+                    "properties": { "AND": { "type": "array" } }
+                  },
+                  "recipients": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "user_alias": {
+                          "type": "object",
+                          "properties": {
+                            "alias_name": { "type": "string" },
+                            "alias_label": { "type": "string" }
+                          }
+                        },
+                        "external_user_id": { "type": "string" },
+                        "trigger_properties": { "type": "string" },
+                        "send_to_existing_only": { "type": "boolean" },
+                        "attributes": {
+                          "type": "object",
+                          "properties": { "first_name": { "type": "string" } }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -3889,6 +4394,44 @@
                       "attributes": { "first_name": "Alex" }
                     }
                   ]
+                },
+                "properties": {
+                  "canvas_id": { "type": "string" },
+                  "canvas_entry_properties": {
+                    "type": "object",
+                    "properties": {
+                      "product_name": { "type": "string" },
+                      "product_price": { "type": "number" }
+                    }
+                  },
+                  "broadcast": { "type": "boolean" },
+                  "audience": {
+                    "type": "object",
+                    "properties": { "AND": { "type": "array" } }
+                  },
+                  "recipients": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "user_alias": {
+                          "type": "object",
+                          "properties": {
+                            "alias_name": { "type": "string" },
+                            "alias_label": { "type": "string" }
+                          }
+                        },
+                        "external_user_id": { "type": "string" },
+                        "trigger_properties": { "type": "string" },
+                        "canvas_entry_properties": { "type": "string" },
+                        "send_to_existing_only": { "type": "boolean" },
+                        "attributes": {
+                          "type": "object",
+                          "properties": { "first_name": { "type": "string" } }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -4059,6 +4602,23 @@
                   "recipient": [
                     { "external_user_id": "TARGETED_USER_ID_STRING" }
                   ]
+                },
+                "properties": {
+                  "external_send_id": { "type": "string" },
+                  "trigger_properties": {
+                    "type": "object",
+                    "properties": {
+                      "example_string_property": { "type": "string" },
+                      "example_integer_property": { "type": "string" }
+                    }
+                  },
+                  "recipient": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": { "external_user_id": { "type": "string" } }
+                    }
+                  }
                 }
               }
             }
@@ -4117,6 +4677,19 @@
                   "confirmation_page_html": "string",
                   "state": "active",
                   "options": { "meta-viewport-content": "string" }
+                },
+                "properties": {
+                  "name": { "type": "string" },
+                  "preference_center_title": { "type": "string" },
+                  "preference_center_page_html": { "type": "string" },
+                  "confirmation_page_html": { "type": "string" },
+                  "state": { "type": "string" },
+                  "options": {
+                    "type": "object",
+                    "properties": {
+                      "meta-viewport-content": { "type": "string" }
+                    }
+                  }
                 }
               }
             }
@@ -4274,6 +4847,52 @@
                       }
                     ]
                   }
+                },
+                "properties": {
+                  "schemas": { "type": "array", "items": { "type": "string" } },
+                  "name": {
+                    "type": "object",
+                    "properties": {
+                      "givenName": { "type": "string" },
+                      "familyName": { "type": "string" }
+                    }
+                  },
+                  "department": { "type": "string" },
+                  "permissions": {
+                    "type": "object",
+                    "properties": {
+                      "companyPermissions": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      },
+                      "appGroup": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "appGroupName": { "type": "string" },
+                            "appGroupPermissions": {
+                              "type": "array",
+                              "items": { "type": "string" }
+                            },
+                            "team": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "teamName": { "type": "string" },
+                                  "teamPermissions": {
+                                    "type": "array",
+                                    "items": { "type": "string" }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -4402,6 +5021,53 @@
                       }
                     ]
                   }
+                },
+                "properties": {
+                  "schemas": { "type": "array", "items": { "type": "string" } },
+                  "userName": { "type": "string" },
+                  "name": {
+                    "type": "object",
+                    "properties": {
+                      "givenName": { "type": "string" },
+                      "familyName": { "type": "string" }
+                    }
+                  },
+                  "department": { "type": "string" },
+                  "permissions": {
+                    "type": "object",
+                    "properties": {
+                      "companyPermissions": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      },
+                      "appGroup": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "appGroupName": { "type": "string" },
+                            "appGroupPermissions": {
+                              "type": "array",
+                              "items": { "type": "string" }
+                            },
+                            "team": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "teamName": { "type": "string" },
+                                  "teamPermissions": {
+                                    "type": "array",
+                                    "items": { "type": "string" }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -4517,7 +5183,13 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "example": { "phone_numbers": ["12183095514", "14255551212"] }
+                "example": { "phone_numbers": ["12183095514", "14255551212"] },
+                "properties": {
+                  "phone_numbers": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
               }
             }
           }
@@ -4674,6 +5346,12 @@
                   "subscription_state": "unsubscribed",
                   "external_id": "external_identifier",
                   "phone": ["+12223334444", "+11112223333"]
+                },
+                "properties": {
+                  "subscription_group_id": { "type": "string" },
+                  "subscription_state": { "type": "string" },
+                  "external_id": { "type": "string" },
+                  "phone": { "type": "array", "items": { "type": "string" } }
                 }
               }
             }
@@ -4727,6 +5405,22 @@
                       "emails": ["example1@email.com", "example2@email.com"]
                     }
                   ]
+                },
+                "properties": {
+                  "subscription_groups": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "subscription_group_id": { "type": "string" },
+                        "subscription_state": { "type": "string" },
+                        "emails": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -4877,6 +5571,13 @@
                   "content": "HTML content within block",
                   "state": "draft",
                   "tags": ["marketing"]
+                },
+                "properties": {
+                  "name": { "type": "string" },
+                  "description": { "type": "string" },
+                  "content": { "type": "string" },
+                  "state": { "type": "string" },
+                  "tags": { "type": "array", "items": { "type": "string" } }
                 }
               }
             }
@@ -4929,6 +5630,14 @@
                   "content": "HTML or text content within block",
                   "state": "draft",
                   "tags": ["marketing"]
+                },
+                "properties": {
+                  "content_block_id": { "type": "string" },
+                  "name": { "type": "string" },
+                  "description": { "type": "string" },
+                  "content": { "type": "string" },
+                  "state": { "type": "string" },
+                  "tags": { "type": "array", "items": { "type": "string" } }
                 }
               }
             }
@@ -5073,6 +5782,14 @@
                   "plaintext_body": "This is the text within my email body and here is a link to https://www.braze.com/.",
                   "preheader": "My preheader is pretty cool.",
                   "tags": ["Tag1", "Tag2"]
+                },
+                "properties": {
+                  "template_name": { "type": "string" },
+                  "subject": { "type": "string" },
+                  "body": { "type": "string" },
+                  "plaintext_body": { "type": "string" },
+                  "preheader": { "type": "string" },
+                  "tags": { "type": "array", "items": { "type": "string" } }
                 }
               }
             }
@@ -5125,6 +5842,18 @@
                       "new_external_id": "new_external_id"
                     }
                   ]
+                },
+                "properties": {
+                  "external_id_renames": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "current_external_id": { "type": "string" },
+                        "new_external_id": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -5172,6 +5901,12 @@
                 "type": "object",
                 "example": {
                   "external_ids": ["existing_deprecated_external_id_string"]
+                },
+                "properties": {
+                  "external_ids": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
                 }
               }
             }
@@ -5225,6 +5960,19 @@
                       "new_alias_name": "example_new_alias_name"
                     }
                   ]
+                },
+                "properties": {
+                  "alias_updates": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "alias_label": { "type": "string" },
+                        "old_alias_name": { "type": "string" },
+                        "new_alias_name": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -5278,6 +6026,19 @@
                       "alias_label": "example_label"
                     }
                   ]
+                },
+                "properties": {
+                  "user_aliases": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "external_id": { "type": "string" },
+                        "alias_name": { "type": "string" },
+                        "alias_label": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -5339,6 +6100,26 @@
                       "alias_label": "alias_label2"
                     }
                   ]
+                },
+                "properties": {
+                  "external_ids": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "braze_ids": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "user_aliases": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "alias_name": { "type": "string" },
+                        "alias_label": { "type": "string" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -5394,6 +6175,24 @@
                       }
                     }
                   ]
+                },
+                "properties": {
+                  "aliases_to_identify": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "external_id": { "type": "string" },
+                        "user_alias": {
+                          "type": "object",
+                          "properties": {
+                            "alias_name": { "type": "string" },
+                            "alias_label": { "type": "string" }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -5460,7 +6259,8 @@
                       }
                     }
                   ]
-                }
+                },
+                "properties": { "merge_updates": { "type": "array" } }
               }
             }
           }

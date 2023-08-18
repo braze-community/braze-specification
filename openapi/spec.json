@@ -641,21 +641,7 @@
                   ]
                 },
                 "properties": {
-                  "items": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "id": { "type": "string" },
-                        "Name": { "type": "string" },
-                        "City": { "type": "string" },
-                        "Cuisine": { "type": "string" },
-                        "Rating": { "type": "integer" },
-                        "Loyalty_Program": { "type": "boolean" },
-                        "Created_At": { "type": "string" }
-                      }
-                    }
-                  }
+                  "items": { "type": "array", "items": { "type": "object" } }
                 }
               }
             }
@@ -719,24 +705,7 @@
                   ]
                 },
                 "properties": {
-                  "items": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "Name": { "type": "string" },
-                        "Loyalty_Program": { "type": "boolean" },
-                        "Location": {
-                          "type": "object",
-                          "properties": {
-                            "Latitude": { "type": "number" },
-                            "Longitude": { "type": "number" }
-                          }
-                        },
-                        "Open_Time": { "type": "string" }
-                      }
-                    }
-                  }
+                  "items": { "type": "array", "items": { "type": "object" } }
                 }
               }
             }
@@ -927,17 +896,7 @@
                   ]
                 },
                 "properties": {
-                  "items": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "Name": { "type": "string" },
-                        "Loyalty_Program": { "type": "boolean" },
-                        "Open_Time": { "type": "string" }
-                      }
-                    }
-                  }
+                  "items": { "type": "array", "items": { "type": "object" } }
                 }
               }
             }
@@ -1006,20 +965,7 @@
                   ]
                 },
                 "properties": {
-                  "items": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "Name": { "type": "string" },
-                        "City": { "type": "string" },
-                        "Cuisine": { "type": "string" },
-                        "Rating": { "type": "integer" },
-                        "Loyalty_Program": { "type": "boolean" },
-                        "Created_At": { "type": "string" }
-                      }
-                    }
-                  }
+                  "items": { "type": "array", "items": { "type": "object" } }
                 }
               }
             }
@@ -1089,24 +1035,7 @@
                   ]
                 },
                 "properties": {
-                  "items": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "Name": { "type": "string" },
-                        "Loyalty_Program": { "type": "boolean" },
-                        "Location": {
-                          "type": "object",
-                          "properties": {
-                            "Latitude": { "type": "number" },
-                            "Longitude": { "type": "number" }
-                          }
-                        },
-                        "Open_Time": { "type": "string" }
-                      }
-                    }
-                  }
+                  "items": { "type": "array", "items": { "type": "object" } }
                 }
               }
             }

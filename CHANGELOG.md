@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/braze-community/braze-specification/compare/v1.0.1...v1.1.0) (2023-08-18)
+
+
+### Features
+
+* **openapi:** add migration to generate JSON Schema from example ([482213a](https://github.com/braze-community/braze-specification/commit/482213ae177abc711462432d68cbc612f5261530))
+
+
+### Bug Fixes
+
+* **openapi:** add migration to fix catalogs JSON Schema ([9ad049d](https://github.com/braze-community/braze-specification/commit/9ad049dca83edab9cac3471537e5aeb2fde576dc))
+
 ## [1.0.1](https://github.com/braze-community/braze-specification/compare/v1.0.0...v1.0.1) (2023-08-13)
 
 

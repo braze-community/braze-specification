@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/braze-community/braze-specification/compare/v1.1.0...v1.1.1) (2023-08-19)
+
+
+### Bug Fixes
+
+* **openapi:** update migration to fix JSON Schema ([112f5a3](https://github.com/braze-community/braze-specification/commit/112f5a31873ee49dfff882f713014c37f5423196))
+
 ## [1.1.0](https://github.com/braze-community/braze-specification/compare/v1.0.1...v1.1.0) (2023-08-18)
 
 

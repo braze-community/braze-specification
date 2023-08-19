@@ -296,45 +296,12 @@
                 "properties": {
                   "attributes": {
                     "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "external_id": { "type": "string" },
-                        "string_attribute": { "type": "string" },
-                        "boolean_attribute_1": { "type": "boolean" },
-                        "integer_attribute": { "type": "integer" },
-                        "array_attribute": {
-                          "type": "array",
-                          "items": { "type": "string" }
-                        }
-                      }
-                    }
+                    "items": { "type": "object" }
                   },
                   "events": { "type": "array" },
                   "purchases": {
                     "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "external_id": { "type": "string" },
-                        "app_id": { "type": "string" },
-                        "product_id": { "type": "string" },
-                        "currency": { "type": "string" },
-                        "price": { "type": "number" },
-                        "quantity": { "type": "integer" },
-                        "time": { "type": "string" },
-                        "properties": {
-                          "type": "object",
-                          "properties": {
-                            "color": { "type": "string" },
-                            "monogram": { "type": "string" },
-                            "checkout_duration": { "type": "integer" },
-                            "size": { "type": "string" },
-                            "brand": { "type": "string" }
-                          }
-                        }
-                      }
-                    }
+                    "items": { "type": "object" }
                   }
                 }
               }

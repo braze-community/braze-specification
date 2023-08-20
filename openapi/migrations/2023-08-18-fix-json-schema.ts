@@ -1,7 +1,7 @@
 import spec from '../spec.json';
 import { traverse, writeSpec } from '../../utils';
 
-traverse(spec, '', null, (value, key) => {
+traverse(spec, '', null, (value, key, parent) => {
   switch (key) {
     case '/catalogs/{catalog_name}/items':
       ['post', 'put'].forEach((method) => {
@@ -21,6 +21,10 @@ traverse(spec, '', null, (value, key) => {
         delete getSchemaProperties(value[method]).purchases.items.properties;
       });
       break;
+  }
+
+  if (key === 'name' && value === 'phone') {
+    parent.schema.type = 'string';
   }
 });
 

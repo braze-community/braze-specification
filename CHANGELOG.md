@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/braze-community/braze-specification/compare/v1.1.1...v1.2.0) (2023-08-20)
+
+
+### Features
+
+* **openapi:** add additional string format to spec.json ([6f725a6](https://github.com/braze-community/braze-specification/commit/6f725a66609b43ea6cb3239f7d52a5c65036d149))
+
 ## [1.1.1](https://github.com/braze-community/braze-specification/compare/v1.1.0...v1.1.1) (2023-08-19)
 
 

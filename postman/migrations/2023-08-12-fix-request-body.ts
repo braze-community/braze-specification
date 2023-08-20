@@ -2,8 +2,12 @@ import collection from '../collection.json';
 import { traverse, writeCollection } from '../../utils';
 
 traverse(collection, '', null, (value, key, parent) => {
-  switch (true) {
-    case key === 'name' && value === 'Create Scheduled Messages':
+  if (key !== 'name') {
+    return;
+  }
+
+  switch (value) {
+    case 'Create Scheduled Messages':
       return (parent.request.body.raw = JSON.stringify({
         broadcast: false,
         external_user_ids: 'external_user_identifiers',
@@ -81,8 +85,7 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
-    case key === 'name' &&
-      value === 'Send Transactional Email via API Triggered Delivery':
+    case 'Send Transactional Email via API Triggered Delivery':
       return (parent.request.body.raw = JSON.stringify({
         external_send_id: 'YOUR_BASE64_COMPATIBLE_ID',
         trigger_properties: {
@@ -96,7 +99,7 @@ traverse(collection, '', null, (value, key, parent) => {
         ],
       }));
 
-    case key === 'name' && value === 'Update Preference Center':
+    case 'Update Preference Center':
       return (parent.request.body.raw = JSON.stringify({
         external_send_id: 'YOUR_BASE64_COMPATIBLE_ID',
         trigger_properties: {
@@ -110,7 +113,7 @@ traverse(collection, '', null, (value, key, parent) => {
         ],
       }));
 
-    case key === 'name' && value === 'Update Preference Center':
+    case 'Update Preference Center':
       return (parent.request.body.raw = JSON.stringify({
         name: 'preference_center_name',
         preference_center_title: 'string',
@@ -121,7 +124,7 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
-    case key === 'name' && value === 'Create Preference Center':
+    case 'Create Preference Center':
       return (parent.request.body.raw = JSON.stringify({
         name: 'string',
         preference_center_title: 'string',
@@ -133,8 +136,7 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
-    case key === 'name' &&
-      value === "Update User's Subscription Group Status V2":
+    case "Update User's Subscription Group Status V2":
       return (parent.request.body.raw = JSON.stringify({
         subscription_groups: [
           {
@@ -145,7 +147,7 @@ traverse(collection, '', null, (value, key, parent) => {
         ],
       }));
 
-    case key === 'name' && value === 'Remove External ID':
+    case 'Remove External ID':
       return (parent.request.body.raw = JSON.stringify({
         external_ids: ['existing_deprecated_external_id_string'],
       }));

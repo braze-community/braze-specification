@@ -1200,7 +1200,7 @@
                   "subscription_state": "subscribed"
                 },
                 "properties": {
-                  "email": { "type": "string" },
+                  "email": { "type": "string", "format": "email" },
                   "subscription_state": { "type": "string" }
                 }
               }
@@ -1248,7 +1248,9 @@
               "schema": {
                 "type": "object",
                 "example": { "email": "example@braze.com" },
-                "properties": { "email": { "type": "string" } }
+                "properties": {
+                  "email": { "type": "string", "format": "email" }
+                }
               }
             }
           }
@@ -1294,7 +1296,9 @@
               "schema": {
                 "type": "object",
                 "example": { "email": "example@braze.com" },
-                "properties": { "email": { "type": "string" } }
+                "properties": {
+                  "email": { "type": "string", "format": "email" }
+                }
               }
             }
           }
@@ -2723,7 +2727,7 @@
                   },
                   "device_id": { "type": "string" },
                   "braze_id": { "type": "string" },
-                  "email_address": { "type": "string" },
+                  "email_address": { "type": "string", "format": "email" },
                   "phone": { "type": "string" },
                   "fields_to_export": {
                     "type": "array",
@@ -2915,8 +2919,8 @@
                     }
                   },
                   "end_activity": { "type": "boolean" },
-                  "dismissal_date": { "type": "string" },
-                  "stale_date": { "type": "string" },
+                  "dismissal_date": { "type": "string", "format": "date-time" },
+                  "stale_date": { "type": "string", "format": "date-time" },
                   "notification": {
                     "type": "object",
                     "properties": {
@@ -3605,7 +3609,9 @@
                   "schedule_id": { "type": "string" },
                   "schedule": {
                     "type": "object",
-                    "properties": { "time": { "type": "string" } }
+                    "properties": {
+                      "time": { "type": "string", "format": "date-time" }
+                    }
                   },
                   "messages": {
                     "type": "object",
@@ -3694,7 +3700,7 @@
                   "schedule": {
                     "type": "object",
                     "properties": {
-                      "time": { "type": "string" },
+                      "time": { "type": "string", "format": "date-time" },
                       "in_local_time": { "type": "boolean" }
                     }
                   }
@@ -3757,7 +3763,7 @@
                   "schedule": {
                     "type": "object",
                     "properties": {
-                      "time": { "type": "string" },
+                      "time": { "type": "string", "format": "date-time" },
                       "in_local_time": { "type": "boolean" }
                     }
                   }
@@ -4920,7 +4926,7 @@
                 },
                 "properties": {
                   "schemas": { "type": "array", "items": { "type": "string" } },
-                  "userName": { "type": "string" },
+                  "userName": { "type": "string", "format": "email" },
                   "name": {
                     "type": "object",
                     "properties": {
@@ -5312,7 +5318,7 @@
                         "subscription_state": { "type": "string" },
                         "emails": {
                           "type": "array",
-                          "items": { "type": "string" }
+                          "items": { "type": "string", "format": "email" }
                         }
                       }
                     }

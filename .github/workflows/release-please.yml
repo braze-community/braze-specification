@@ -21,6 +21,7 @@ jobs:
     needs: release-please
     runs-on: ubuntu-latest
     if: ${{ needs.release-please.outputs.release_created }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -31,7 +32,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --prefer-offline
 
       - name: Publish
         run: npm publish

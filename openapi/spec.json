@@ -3456,7 +3456,7 @@
                     {
                       "user_alias": "example_alias",
                       "external_user_id": "external_user_identifier",
-                      "trigger_properties": "",
+                      "trigger_properties": {},
                       "canvas_entry_properties": {}
                     }
                   ],
@@ -3524,7 +3524,7 @@
                       "properties": {
                         "user_alias": { "type": "string" },
                         "external_user_id": { "type": "string" },
-                        "trigger_properties": { "type": "string" },
+                        "trigger_properties": { "type": "object" },
                         "canvas_entry_properties": { "type": "object" }
                       }
                     }
@@ -4091,7 +4091,7 @@
                 "example": {
                   "campaign_id": "campaign_identifier",
                   "send_id": "send_identifier",
-                  "trigger_properties": "",
+                  "trigger_properties": {},
                   "broadcast": false,
                   "audience": {
                     "AND": [
@@ -4147,7 +4147,7 @@
                         "alias_label": "example_label"
                       },
                       "external_user_id": "external_user_identifier",
-                      "trigger_properties": "",
+                      "trigger_properties": {},
                       "send_to_existing_only": true,
                       "attributes": { "first_name": "Alex" }
                     }
@@ -4156,7 +4156,7 @@
                 "properties": {
                   "campaign_id": { "type": "string" },
                   "send_id": { "type": "string" },
-                  "trigger_properties": { "type": "string" },
+                  "trigger_properties": { "type": "object" },
                   "broadcast": { "type": "boolean" },
                   "audience": {
                     "type": "object",
@@ -4175,7 +4175,7 @@
                           }
                         },
                         "external_user_id": { "type": "string" },
-                        "trigger_properties": { "type": "string" },
+                        "trigger_properties": { "type": "object" },
                         "send_to_existing_only": { "type": "boolean" },
                         "attributes": {
                           "type": "object",
@@ -4290,7 +4290,7 @@
                         "alias_label": "example_label"
                       },
                       "external_user_id": "user_identifier",
-                      "trigger_properties": "",
+                      "trigger_properties": {},
                       "canvas_entry_properties": "",
                       "send_to_existing_only": true,
                       "attributes": { "first_name": "Alex" }
@@ -4324,7 +4324,7 @@
                           }
                         },
                         "external_user_id": { "type": "string" },
-                        "trigger_properties": { "type": "string" },
+                        "trigger_properties": { "type": "object" },
                         "canvas_entry_properties": { "type": "string" },
                         "send_to_existing_only": { "type": "boolean" },
                         "attributes": {

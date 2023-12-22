@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/braze-community/braze-specification/compare/v1.2.0...v1.2.1) (2023-12-22)
+
+
+### Bug Fixes
+
+* **openapi:** add migration to change 'trigger_properties' to object ([4287496](https://github.com/braze-community/braze-specification/commit/4287496ed8b538f0895641f82e1ef5a54b59edb6))
+
 ## [1.2.0](https://github.com/braze-community/braze-specification/compare/v1.1.1...v1.2.0) (2023-08-20)
 
 

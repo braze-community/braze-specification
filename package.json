@@ -46,7 +46,7 @@
     "postman-to-openapi": "3.0.1",
     "prettier": "3.2.5",
     "ts-node": "10.9.2",
-    "typescript": "5.4.4"
+    "typescript": "5.4.5"
   },
   "files": [
     "openapi/spec.json",

@@ -39,7 +39,7 @@
     "@stoplight/spectral-cli": "6.11.1",
     "costatus": "1.0.1",
     "husky": "9.0.11",
-    "json-schema-it": "1.2.6",
+    "json-schema-it": "1.2.7",
     "lint-staged": "15.2.2",
     "npm-run-all": "4.1.5",
     "pinst": "3.0.0",

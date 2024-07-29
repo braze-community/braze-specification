@@ -37,7 +37,7 @@
     "@commitlint/config-conventional": "19.2.2",
     "@stoplight/spectral-cli": "6.11.1",
     "costatus": "1.0.1",
-    "husky": "9.1.2",
+    "husky": "9.1.3",
     "json-schema-it": "1.2.9",
     "lint-staged": "15.2.7",
     "npm-run-all": "4.1.5",

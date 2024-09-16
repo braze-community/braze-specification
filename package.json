@@ -35,7 +35,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
-    "@stoplight/spectral-cli": "6.11.1",
+    "@stoplight/spectral-cli": "6.13.0",
     "costatus": "1.0.1",
     "husky": "9.1.6",
     "json-schema-it": "1.2.10",

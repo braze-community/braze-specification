@@ -5,7 +5,7 @@
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
     "build": "run-s migrations:postman postman-to-openapi migrations:openapi",
-    "clean": "rm -rf .cache openapi",
+    "clean": "rm -rf .cache openapi/spec.json",
     "lint": "spectral lint openapi/spec.json --display-only-failures",
     "lint:tsc": "tsc --noEmit",
     "migrations:openapi": "ts-node openapi/migrations",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
-    "@stoplight/spectral-cli": "6.11.1",
+    "@stoplight/spectral-cli": "6.13.1",
     "costatus": "1.0.2",
     "husky": "9.1.6",
     "json-schema-it": "1.2.11",

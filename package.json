@@ -5,7 +5,7 @@
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
     "build": "run-s migrations:postman postman-to-openapi migrations:openapi",
-    "clean": "rm -rf .cache openapi",
+    "clean": "rm -rf .cache openapi/spec.json",
     "lint": "spectral lint openapi/spec.json --display-only-failures",
     "lint:tsc": "tsc --noEmit",
     "migrations:openapi": "ts-node openapi/migrations",

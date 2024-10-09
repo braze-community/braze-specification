@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/braze-community/braze-specification/compare/v1.2.2...v1.2.3) (2024-10-09)
+
+
+### Continuous Integration
+
+* **github:** publish package to npm registry with provenance ([f8b624c](https://github.com/braze-community/braze-specification/commit/f8b624c71d090be39d9fcc8c76789b338441223d))
+
 ## [1.2.2](https://github.com/braze-community/braze-specification/compare/v1.2.1...v1.2.2) (2024-10-09)
 
 ### Bug Fixes

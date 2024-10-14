@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/braze-community/braze-specification/compare/v1.2.3...v1.2.4) (2024-10-14)
+
+
+### Bug Fixes
+
+* **openapi:** create migration to add POST response 201 ([780dd78](https://github.com/braze-community/braze-specification/commit/780dd78d9404ecf6a6d940ce40c545d036f083b1))
+
 ## [1.2.3](https://github.com/braze-community/braze-specification/compare/v1.2.2...v1.2.3) (2024-10-09)
 
 

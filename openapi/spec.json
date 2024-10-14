@@ -224,6 +224,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -324,6 +330,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -473,6 +485,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -636,6 +654,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -971,6 +995,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -1228,6 +1258,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -1276,6 +1312,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -1319,6 +1361,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -1374,6 +1422,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -1419,6 +1473,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -2759,6 +2819,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -2818,6 +2884,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -2870,6 +2942,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -2959,6 +3037,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -3041,6 +3125,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -3093,6 +3183,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -3140,6 +3236,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -3295,6 +3397,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -3430,6 +3538,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -3575,6 +3689,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -3673,6 +3793,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -3731,6 +3857,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -3799,6 +3931,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -3846,6 +3984,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -4000,6 +4144,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -4072,6 +4222,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -4215,6 +4371,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -4367,6 +4529,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -4625,6 +4793,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -5014,6 +5188,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -5124,6 +5304,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -5292,6 +5478,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -5356,6 +5548,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -5518,6 +5716,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -5573,6 +5777,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -5730,6 +5940,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -5794,6 +6010,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -5842,6 +6064,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -5913,6 +6141,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -5974,6 +6208,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }
@@ -6060,6 +6300,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -6133,6 +6379,12 @@
               "application/json": { "schema": { "type": "object" } }
             }
           },
+          "201": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
           "400": { "$ref": "#/components/responses/BadRequest" },
           "401": { "$ref": "#/components/responses/Unauthorized" },
           "403": { "$ref": "#/components/responses/Forbidden" },
@@ -6200,6 +6452,12 @@
         ],
         "responses": {
           "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": { "schema": { "type": "object" } }
+            }
+          },
+          "201": {
             "description": "Successful response",
             "content": {
               "application/json": { "schema": { "type": "object" } }

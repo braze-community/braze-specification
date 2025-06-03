@@ -449,12 +449,12 @@
                 },
                 {
                   "key": "limit",
-                  "value": "100",
+                  "value": 100,
                   "description": "(Optional) Integer\n\nOptional field to limit the number of results returned. Defaults to 100, maximum is 500."
                 },
                 {
                   "key": "offset",
-                  "value": "1",
+                  "value": 1,
                   "description": "(Optional) Integer\n\nOptional beginning point in the list to retrieve from."
                 },
                 {
@@ -471,9 +471,7 @@
         {
           "name": "Query list of unsubscribed email addresses",
           "request": {
-            "auth": {
-              "type": "noauth"
-            },
+            "auth": { "type": "noauth" },
             "method": "GET",
             "header": [
               {
@@ -500,12 +498,12 @@
                 },
                 {
                   "key": "limit",
-                  "value": "1",
+                  "value": 1,
                   "description": "(Optional) Integer\n\nOptional field to limit the number of results returned. Limit must be greater than 1. Defaults to 100, maximum is 500."
                 },
                 {
                   "key": "offset",
-                  "value": "1",
+                  "value": 1,
                   "description": "(Optional) Integer \n\nOptional beginning point in the list to retrieve from."
                 },
                 {
@@ -529,10 +527,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "value": "Bearer {{api_key}}",
@@ -558,10 +553,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "value": "Bearer {{api_key}}",
@@ -587,10 +579,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "value": "Bearer {{api_key}}",
@@ -704,7 +693,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "7",
+                      "value": 7,
                       "description": "(Required) Integer\n\nMax number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -765,12 +754,12 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "0",
+                      "value": 0,
                       "description": "(Optional) Integer\n\nThe page of campaigns to return, defaults to 0 (returns the first set of up to 100)."
                     },
                     {
                       "key": "include_archived",
-                      "value": "false",
+                      "value": false,
                       "description": "(Optional) Boolean\n\nWhether or not to include archived campaigns, defaults to false."
                     },
                     {
@@ -818,7 +807,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "30",
+                      "value": 30,
                       "description": "(Required) Integer\n\nMax number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -871,22 +860,22 @@
                     },
                     {
                       "key": "length",
-                      "value": "10",
+                      "value": 10,
                       "description": "(Optional*) String\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive).\n\n*Either `length` or `starting_at` is required."
                     },
                     {
                       "key": "include_variant_breakdown",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include variant stats (defaults to false)."
                     },
                     {
                       "key": "include_step_breakdown",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include step stats (defaults to false)."
                     },
                     {
                       "key": "include_deleted_step_data",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include step stats for deleted steps (defaults to false)."
                     }
                   ]
@@ -929,22 +918,22 @@
                     },
                     {
                       "key": "length",
-                      "value": "5",
+                      "value": 5,
                       "description": "(Optional*) Integer\n\nMax number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive).\n\n*Either `length` or `starting_at` is required."
                     },
                     {
                       "key": "include_variant_breakdown",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include variant stats (defaults to false)."
                     },
                     {
                       "key": "include_step_breakdown",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include step stats (defaults to false)."
                     },
                     {
                       "key": "include_deleted_step_data",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include step stats for deleted steps (defaults to false)."
                     }
                   ]
@@ -1000,12 +989,12 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nThe page of Canvases to return, defaults to `0` (returns the first set of up to 100)."
                     },
                     {
                       "key": "include_archived",
-                      "value": "false",
+                      "value": false,
                       "description": "(Optional) Boolean\n\nWhether or not to include archived Canvases, defaults to `false`."
                     },
                     {
@@ -1048,7 +1037,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "3",
+                      "value": 3,
                       "description": "(Optional) Integer\n\nThe page of event names to return, defaults to 0 (returns the first set of up to 250)."
                     }
                   ]
@@ -1081,7 +1070,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "24",
+                      "value": 24,
                       "description": "(Required) Integer\n\nMaximum number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1134,7 +1123,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1172,7 +1161,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "10",
+                      "value": 10,
                       "description": "(Required) Integer\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1210,7 +1199,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "7",
+                      "value": 7,
                       "description": "(Required) Integer\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1248,7 +1237,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMaximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1296,7 +1285,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMax number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1362,12 +1351,12 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nThe page of cards to return, defaults to 0 (returns the first set of up to 100)."
                     },
                     {
                       "key": "include_archived",
-                      "value": "true",
+                      "value": true,
                       "description": "(Optional) Boolean\n\nWhether or not to include archived cards, defaults to false."
                     },
                     {
@@ -1405,7 +1394,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nThe page of your product list that you would like to view."
                     }
                   ]
@@ -1438,12 +1427,12 @@
                     },
                     {
                       "key": "length",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Required) Integer\nMaximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
                       "key": "unit",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Optional) String\nUnit of time between data points. Can be `day` or `hour`, defaults to `day`. "
                     },
                     {
@@ -1486,12 +1475,12 @@
                     },
                     {
                       "key": "length",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Required) Integer\nMaximum number of days before ending_at to include in the returned series. Must be between 1 and 100 (inclusive)."
                     },
                     {
                       "key": "unit",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Optional) String\nUnit of time between data points. Can be `day` or `hour`, defaults to `day`. "
                     },
                     {
@@ -1520,10 +1509,7 @@
               "request": {
                 "method": "GET",
                 "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{api_key}}"
-                  }
+                  { "key": "Authorization", "value": "Bearer {{api_key}}" }
                 ],
                 "url": {
                   "raw": "https://{{instance_url}}/segments/list?page=1&sort_direction=desc",
@@ -1533,7 +1519,7 @@
                   "query": [
                     {
                       "key": "page",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nThe page of segments to return, defaults to 0 (returns the first set of up to 100)."
                     },
                     {
@@ -1571,7 +1557,7 @@
                     },
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMax number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1637,7 +1623,7 @@
                   "query": [
                     {
                       "key": "length",
-                      "value": "14",
+                      "value": 14,
                       "description": "(Required) Integer\n\nMax number of days before `ending_at` to include in the returned series - must be between 1 and 100 (inclusive)."
                     },
                     {
@@ -1707,10 +1693,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -1768,17 +1751,11 @@
       "event": [
         {
           "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "exec": [""]
-          }
+          "script": { "type": "text/javascript", "exec": [""] }
         },
         {
           "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [""]
-          }
+          "script": { "type": "text/javascript", "exec": [""] }
         }
       ]
     },
@@ -1901,11 +1878,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"canvas_id\": \"canvas_identifier\",\n  \"schedule_id\": \"schedule_identifier\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
+                  "options": { "raw": { "language": "json" } }
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/canvas/trigger/schedule/delete",
@@ -1956,11 +1929,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"broadcast\": \"false\",\n  \"external_user_ids\": \"external_user_identifiers\",\n  \"user_aliases\": {\n    \"alias_name\" : \"example_name\",\n    \"alias_label\" : \"example_label\"\n  },\n  \"segment_id\": \"segment_identifiers\",\n  \"audience\": {\n    \"AND\": [\n      {\n        \"custom_attribute\": {\n          \"custom_attribute_name\": \"eye_color\",\n          \"comparison\": \"equals\",\n          \"value\": \"blue\"\n        }\n      },\n      {\n        \"custom_attribute\": {\n          \"custom_attribute_name\": \"favorite_foods\",\n          \"comparison\": \"includes_value\",\n          \"value\": \"pizza\"\n        }\n      },\n      {\n        \"OR\": [\n          {\n            \"custom_attribute\": {\n              \"custom_attribute_name\": \"last_purchase_time\",\n              \"comparison\": \"less_than_x_days_ago\",\n              \"value\": 2\n            }\n          },\n          {\n            \"push_subscription_status\": {\n              \"comparison\": \"is\",\n              \"value\": \"opted_in\"\n            }\n          }\n        ]\n      },\n      {\n        \"email_subscription_status\": {\n          \"comparison\": \"is_not\",\n          \"value\": \"subscribed\"\n        }\n      },\n      {\n        \"last_used_app\": {\n          \"comparison\": \"after\",\n          \"value\": \"2019-07-22T13:17:55+0000\"\n        }\n      }\n    ]\n  },\n  \"campaign_id\": \"campaign_identifier\",\n  \"send_id\": \"send_identifier\",\n  \"override_messaging_limits\": false,\n  \"recipient_subscription_state\": \"subscribed\",\n  \"schedule\": {\n    \"time\": \"\",\n    \"in_local_time\": true,\n    \"at_optimal_time\": true\n  },\n  \"messages\": {\n    \"apple_push\": (optional, Apple Push Object),\n    \"android_push\": (optional, Android Push Object),\n    \"windows_push\": (optional, Windows Phone 8 Push Object),\n    \"windows8_push\": (optional, Windows Universal Push Object),\n    \"kindle_push\": (optional, Kindle/FireOS Push Object),\n    \"web_push\": (optional, Web Push Object),\n    \"email\": (optional, Email object)\n    \"webhook\": (optional, Webhook object)\n    \"content_card\": (optional, Content Card Object)\n  }\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
+                  "options": { "raw": { "language": "json" } }
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/messages/schedule/create",
@@ -1977,10 +1946,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2006,10 +1972,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2035,10 +1998,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2064,10 +2024,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2129,10 +2086,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2188,10 +2142,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2223,10 +2174,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2252,10 +2200,7 @@
               "request": {
                 "method": "POST",
                 "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  },
+                  { "key": "Content-Type", "value": "application/json" },
                   {
                     "key": "Authorization",
                     "value": "Bearer {{api_key}}",
@@ -2495,12 +2440,7 @@
               "protocol": "https",
               "host": ["{{instance_url}}"],
               "path": ["scim", "v2", "Users"],
-              "query": [
-                {
-                  "key": "filter",
-                  "value": "{userName@example.com}"
-                }
-              ]
+              "query": [{ "key": "filter", "value": "{userName@example.com}" }]
             },
             "description": "> Use this endpoint to look up an existing dashboard user account by specifying their email in the filter query parameter. \n  \n\nNote that when the query parameter is URL encoded it will read like this: `/scim/v2/Users?filter=userName eq \"user@test.com\"`\n\n## Prerequisites\n\nTo use this endpoint, you'll need a SCIM token. For more information, refer to [Automated user provisioning](https://www.braze.com/docs/scim/automated_user_provisioning/).\n\n## Rate limit\n\nThis endpoint has a rate limit of 5000 requests per day, per company. This rate limit is shared with the `/scim/v2/Users/` PUT, GET, DELETE, and POST endpoints as documented in [API rate limits](https://www.braze.com/docs/api/api_limits/).\n\n## Path parameters\n\n| Parameter | Required | Data Type | Description |\n| --- | --- | --- | --- |\n| `userName@example.com` | Required | String | The user's email. |\n\n## Request parameters\n\nThere is no request body for this endpoint.\n\n## Response\n\n``` json\nContent-Type: application/json\nX-Request-Origin: YOUR-REQUEST-ORIGIN-HERE\nAuthorization: Bearer YOUR-SCIM-TOKEN-HERE\n{\n    \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"],\n    \"totalResults\": 1,\n    \"Resources\": [\n        {\n            \"userName\": \"user@test.com\",\n            \"id\": \"dfa245b7-24195aec-887bb3ad-602b3340\",\n            \"name\": {\n                \"givenName\": \"Test\",\n                \"familyName\": \"User\"\n            },\n            \"department\": \"finance\",\n            \"lastSignInAt\": \"Thursday, January 1, 1970 12:00:00 AM\",\n            \"permissions\": {\n                \"companyPermissions\": [\"manage_company_settings\"],\n                \"appGroup\": [\n                    {\n                        \"appGroupId\": \"241adcd25789fabcded\",\n                        \"appGroupName\": \"Test Workspace\",\n                        \"appGroupPermissions\": [\"basic_access\",\"send_campaigns_canvases\"],\n                        \"team\": [\n                            {\n                                \"teamId\": \"241adcd25789fabcded\",\n                                \"teamName\": \"Test Team\",                  \n                                \"teamPermissions\": [\"admin\"]\n                            }\n                        ]\n                    } \n                ]\n            }\n        }\n    ]\n}\n\n ```"
           },
@@ -2642,17 +2582,17 @@
                 },
                 {
                   "key": "limit",
-                  "value": "100",
+                  "value": 100,
                   "description": "(Optional) Integer\n\nOptional field to limit the number of results returned. Defaults to 100, maximum is 500."
                 },
                 {
                   "key": "offset",
-                  "value": "1",
+                  "value": 1,
                   "description": "(Optional) Integer\n\nOptional beginning point in the list to retrieve from."
                 },
                 {
                   "key": "phone_numbers",
-                  "value": "12345678901",
+                  "value": 12345678901,
                   "description": "(Optional*) Array of Strings in e.164 format\n\nIf provided, we will return the phone number if it has been found to be invalid.\n"
                 },
                 {
@@ -2745,9 +2685,7 @@
             },
             {
               "name": "List user's subscription group",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
+              "protocolProfileBehavior": { "disableBodyPruning": true },
               "request": {
                 "method": "GET",
                 "header": [
@@ -2759,10 +2697,7 @@
                 ],
                 "body": {
                   "mode": "graphql",
-                  "graphql": {
-                    "query": "",
-                    "variables": ""
-                  }
+                  "graphql": { "query": "", "variables": "" }
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=0",
@@ -2782,12 +2717,12 @@
                     },
                     {
                       "key": "limit",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Optional) Integer\n\nThe limit on the maximum number of results returned. Default (and maximum) limit is 100."
                     },
                     {
                       "key": "offset",
-                      "value": "0",
+                      "value": 0,
                       "description": "(Optional) Integer\n\nNumber of templates to skip before returning the rest of the templates that fit the search criteria."
                     }
                   ]
@@ -2815,11 +2750,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": "\"subscription_groups\":[\n    {\n      \"subscription_group_id\": (required, string),\n      \"subscription_state\": (required, string)\n      \"external_ids\": (required*, array of strings),\n      \"emails\": (required*, array of strings),\n      \"phones\": (required*, array of strings in E.164 format),\n    }\n  ]",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
+                  "options": { "raw": { "language": "json" } }
                 },
                 "url": {
                   "raw": "https://{{instance_url}} /v2/subscription/status/set",
@@ -2928,12 +2859,12 @@
                     },
                     {
                       "key": "limit",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Optional) Integer\n\nThe limit on the maximum number of results returned. Default (and maximum) limit is 100."
                     },
                     {
                       "key": "offset",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Integer\n\nNumber of templates to skip before returning the rest of the templates that fit the search criteria."
                     },
                     {
@@ -3047,12 +2978,12 @@
                     },
                     {
                       "key": "limit",
-                      "value": "100",
+                      "value": 100,
                       "description": "(Optional) Positive Number\n\nMaximum number of content blocks to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000."
                     },
                     {
                       "key": "offset",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Positive Number\n\nNumber of content blocks to skip before returning rest of the templates that fit the search criteria."
                     }
                   ]
@@ -3085,7 +3016,7 @@
                     },
                     {
                       "key": "include_inclusion_data",
-                      "value": "false",
+                      "value": false,
                       "description": "(Optional) Boolean\n\nWhen set to `true`, the API returns back the Message Variation API identifier of campaigns and Canvases where this Content Block is included, to be used in subsequent calls. The results exclude archived or deleted campaigns or Canvases.\n"
                     }
                   ]
@@ -3199,12 +3130,12 @@
                     },
                     {
                       "key": "limit",
-                      "value": "1",
+                      "value": 1,
                       "description": "(Optional) Positive Number\n\nMaximum number of templates to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000."
                     },
                     {
                       "key": "offset",
-                      "value": "0",
+                      "value": 0,
                       "description": "(Optional) Positive Number\n\nNumber of templates to skip before returning rest of the templates that fit the search criteria."
                     }
                   ]
@@ -3327,11 +3258,7 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n  \"email_template_id\": (required, string) Your email template's API Identifier,\n  \"template_name\": (optional, string) The name of your email template,\n  \"subject\": (optional, string) The email template subject line,\n  \"body\": (optional, string) The email template body that may include HTML,\n  \"plaintext_body\": (optional, string) A plaintext version of the email template body,\n  \"preheader\": (optional, string) The email preheader used to generate previews in some clients,\n  \"tags\": (optional, array of Strings) Tags must already exist,\n  \"should_inline_css\": (optional, Boolean) If `true`, the `inline_css` feature will be applied to the template.\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
+                  "options": { "raw": { "language": "json" } }
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/templates/email/update?email_template_id={{email_template_id}}&template_name&subject&body&plaintext_body&preheader&tags&should_inline_css",
@@ -3464,10 +3391,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "value": "Bearer {{api_key}}",
@@ -3523,10 +3447,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "value": "Bearer {{api_key}}",
@@ -3552,10 +3473,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "value": "Bearer {{api_key}}",
@@ -3571,13 +3489,7 @@
               "protocol": "https",
               "host": ["{{instance_url}}"],
               "path": ["users", "track"],
-              "query": [
-                {
-                  "key": "",
-                  "value": "",
-                  "disabled": true
-                }
-              ]
+              "query": [{ "key": "", "value": "", "disabled": true }]
             },
             "description": "> Use this endpoint to record custom events, purchases, and update user profile attributes. \n  \n\n**Note:** Braze processes the data passed via API at face value and customers should only pass deltas (changing data) to minimize unnecessary data point consumption. To read more, refer to [Data points](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points#data-points).\n\n## Prerequisites\n\nTo use this endpoint, you'll need an [API key](https://braze.com/docs/api/api_key/) with the `users.track` permission.\n\nCustomers using the API for server-to-server calls may need to allowlist `rest.iad-01.braze.com` if they’re behind a firewall.\n\n## Rate limit\n\nStarting on October 28th, 2024, we apply a base speed limit of 3,000 requests per three seconds to this endpoint for all customers. Each `/users/track` request can contain up to 75 event objects, 75 attribute objects, and 75 purchase objects. Each object (event, attribute, and purchase arrays) can update one user each. In total, this means a maximum of 225 users can be updated in a single call. In addition, a single user profile can be updated by multiple objects.\n\nDifferent limits apply to customers who have purchased **Monthly Active Users - CY 24-25**. For details on these limits, see [Monthly Active Users - CY 24-25 limits](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).\n\nSee our page on [API rate limits](https://www.braze.com/docs/api/api_limits/) for details, and reach out to your customer success manager if you need your limit increased.\n\n## Request parameters\n\n> **Important:** For each request component listed in the following table, one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone` is required. \n  \n\n| Parameter | Required | Data Type | Description |\n| --- | --- | --- | --- |\n| `attributes` | Optional | Array of attributes objects | See [user attributes object](https://www.braze.com/docs/api/objects_filters/user_attributes_object/) |\n| `events` | Optional | Array of event objects | See [events object](https://www.braze.com/docs/api/objects_filters/event_object/) |\n| `purchases` | Optional | Array of purchase objects | See [purchases object](https://www.braze.com/docs/api/objects_filters/purchase_object/) |\n\n## Example requests\n\n### Update a user profile by email address\n\nYou can update a user profile by email address using the `/users/track` endpoint.\n\n```\ncurl --location --request POST 'https://rest.iad-01.braze.com/users/track' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Bearer YOUR_REST_API_KEY' \\\n--data-raw '{\n    \"attributes\": [\n        {\n            \"email\": \"test@braze.com\",\n            \"string_attribute\": \"fruit\",\n            \"boolean_attribute_1\": true,\n            \"integer_attribute\": 26,\n            \"array_attribute\": [\n                \"banana\",\n                \"apple\"\n            ]\n        }\n    ],\n    \"events\": [\n        {\n            \"email\": \"test@braze.com\",\n            \"app_id\": \"your_app_identifier\",\n            \"name\": \"rented_movie\",\n            \"time\": \"2022-12-06T19:20:45+01:00\",\n            \"properties\": {\n                \"release\": {\n                    \"studio\": \"FilmStudio\",\n                    \"year\": \"2022\"\n                },\n                \"cast\": [\n                    {\n                        \"name\": \"Actor1\"\n                    },\n                    {\n                        \"name\": \"Actor2\"\n                    }\n                ]\n            }\n        },\n        {\n            \"user_alias\": {\n                \"alias_name\": \"device123\",\n                \"alias_label\": \"my_device_identifier\"\n            },\n            \"app_id\": \"your_app_identifier\",\n            \"name\": \"rented_movie\",\n            \"time\": \"2013-07-16T19:20:50+01:00\"\n        }\n    ],\n    \"purchases\": [\n        {\n            \"email\": \"test@braze.com\",\n            \"app_id\": \"your_app_identifier\",\n            \"product_id\": \"product_name\",\n            \"currency\": \"USD\",\n            \"price\": 12.12,\n            \"quantity\": 6,\n            \"time\": \"2017-05-12T18:47:12Z\",\n            \"properties\": {\n                \"color\": \"red\",\n                \"monogram\": \"ABC\",\n                \"checkout_duration\": 180,\n                \"size\": \"Large\",\n                \"brand\": \"Backpack Locker\"\n            }\n        }\n    ]\n}'\n\n ```\n\n### Update a user profile by phone number\n\nYou can update a user profile by phone number using the `/users/track` endpoint. This endpoint only works if you include a valid phone number.\n\n> **Important:**  \nIf you include a request with both `email` and `phone`, Braze will use the email as the identifier. \n  \n\n```\ncurl --location --request POST 'https://rest.iad-01.braze.com/users/track' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Bearer YOUR_REST_API_KEY' \\\n--data-raw '{\n    \"attributes\": [\n        {\n            \"phone\": \"+15043277269\",\n            \"string_attribute\": \"fruit\",\n            \"boolean_attribute_1\": true,\n            \"integer_attribute\": 25,\n            \"array_attribute\": [\n                \"banana\",\n                \"apple\"\n            ]\n        }\n    ],\n}'\n\n ```\n\n### Set subscription groups\n\nThis example shows how to create a user and set their subscription group within the user attributes object.\n\nUpdating the subscription status with this endpoint will update the user specified by their `external_id` (such as User1) and update the subscription status of any users with the same email as that user (User1).\n\n```\ncurl --location --request POST 'https://rest.iad-01.braze.com/users/track' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Bearer YOUR_REST_API_KEY' \\\n--data-raw '{\n  \"attributes\": [\n  {\n    \"external_id\": \"user_identifier\",\n    \"email\": \"example@email.com\",\n    \"email_subscribe\": \"subscribed\",\n    \"subscription_groups\": [{\n      \"subscription_group_id\": \"subscription_group_identifier_1\",\n      \"subscription_state\": \"unsubscribed\"\n      },\n      {\n        \"subscription_group_id\": \"subscription_group_identifier_2\",\n        \"subscription_state\": \"subscribed\"\n        },\n        {\n          \"subscription_group_id\": \"subscription_group_identifier_3\",\n          \"subscription_state\": \"subscribed\"\n        }\n      ]\n    }\n  ]\n}'\n\n ```\n\n### Example request to create an alias-only user\n\nYou can use the `/users/track` endpoint to create a new alias-only user by setting the `_update_existing_only` key with a value of `false` in the body of the request. If this value is omitted, the alias-only user profile will not be created. Using an alias-only user guarantees that one profile with that alias will exist. This is especially helpful when building a new integration as it prevents the creation of duplicate user profiles.\n\n```\ncurl --location --request POST 'https://rest.iad-01.braze.com/users/track' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Bearer YOUR_REST_API_KEY' \\\n--data-raw '{\n{\n    \"attributes\": [\n        {\n            \"_update_existing_only\": false,\n            \"user_alias\": {\n                \"alias_name\": \"example_name\",\n                \"alias_label\": \"example_label\"\n            },\n            \"email\": \"email@example.com\"\n        }\n    ],\n}'\n\n ```\n\n## Responses\n\nWhen using any of the aforementioned API requests, you should receive one of the following three general responses: a [successful message](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#successful-message), a [successful message with non-fatal errors](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#successful-message-with-non-fatal-errors), or a [message with fatal errors](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/#message-with-fatal-errors).\n\n### Successful message\n\nSuccessful messages will be met with the following response:\n\n``` json\n{\n  \"message\" : \"success\",\n  \"attributes_processed\" : (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,\n  \"events_processed\" : (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,\n  \"purchases_processed\" : (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,\n}\n\n ```\n\n### Successful message with non-fatal errors\n\nIf your message is successful but has non-fatal errors, such as one invalid event object out of a long list of events, then you will receive the following response:\n\n``` json\n{\n  \"message\" : \"success\",\n  \"errors\" : [\n    {\n      <minor error message>\n    }\n  ]\n}\n\n ```\n\nFor success messages, any data not affected by an error in the `errors` array will still be processed.\n\n### Message with fatal errors\n\nIf your message has a fatal error, you will receive the following response:\n\n``` json\n{\n  \"message\" : <fatal error message>,\n  \"errors\" : [\n    {\n      <fatal error message>\n    }\n  ]\n}\n\n ```\n\n### Fatal error response codes\n\nFor status codes and associated error messages that will be returned if your request encounters a fatal error, reference [Fatal errors &amp; responses](https://www.braze.com/api/errors/#fatal-errors).\n\nIf you receive the error “provided external_id is blacklisted and disallowed”, your request may have included a “dummy user.” For more information, refer to [Spam blocking](https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).\n\n## Frequently asked questions\n\n> **Important:** \n  \n> Do not send legally required transactional emails to SMS gateways as there’s a strong likelihood that those emails will not be delivered.  \n  \nAlthough emails you send using a phone number and the provider’s gateway domain (known as an MM3) can result in the email being received as an SMS (text) message, some of our email providers do not support this behavior. For example, if you send an email to a T-Mobile phone number (such as “9999999999@tmomail.net”), your SMS message would be sent to whoever owns that phone number on the T-Mobile network.  \n  \nKeep in mind that even though these emails may not be delivered to the SMS gateway, they will still count towards your email billing. To avoid sending emails to unsupported gateways, review the [list of unsupported gateway domain names](https://www.fcc.gov/consumer-governmental-affairs/about-bureau/consumer-policy-division/can-spam/domain-name-downloads). \n  \n\n### What happens when multiple profiles with the same email address are found?\n\nIf the `external_id` exists, the most recently updated profile with an external ID will be prioritized for updates. If the `external_id` doesn’t exist, the most recently updated profile will be prioritized for updates.\n\n### What happens if no profile with the email address currently exists?\n\nA new profile will be created, and an email-only user will be created. An alias will not be created. The email field will be set to test@braze.com, as noted in the example request for updating a user profile by email address.\n\n### How do you use `/users/track` to import legacy user data?\n\nYou may submit data through the Braze API for a user who has not yet used your mobile app to generate a user profile. If the user subsequently uses the application all information following their identification using the SDK will be merged with the existing user profile you created using the API call. Any user behavior recorded anonymously by the SDK before identification will be lost upon merging with the existing API-generated user profile.\n\nThe segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded using the User API who have not yet engaged with the app, add the `Session Count > 0` filter.\n\n### How does `/users/track` handle duplicate events?\n\nEach event object in the events array represents a single occurrence of a custom event by a user at a designated time. This means each event ingested into Braze has its own event ID, so “duplicate” events are treated as separate, unique events.\n\n## Monthly Active Users CY 24-25\n\nFor customers who have purchased Monthly Active Users - CY 24-25, Braze manages different rate limits on its `/users/track` endpoint:\n\n- Hourly rate limits are set according to the expected data ingestion activity on your account, which may correspond to the number of monthly active users you have purchased, industry, seasonality, or other factors.\n    \n- In addition to the limit on requests per hour, Braze also imposes a burst limit on the number of requests allowed per second.\n    \n- Each request may batch up to 50 updates combined across attribute, event, or purchase objects.\n    \n\nCurrent limits based on expected ingestion can be found in the dashboard under **Settings** > **APIs and Identifiers** > **API limits**. We may modify rate limits to protect system stability or allow for increased data throughput on your account. Please contact Braze Support or your customer success manager for questions or concerns regarding hourly or per-second request limit and the needs of your business."
           },
@@ -3588,10 +3500,7 @@
           "request": {
             "method": "POST",
             "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
+              { "key": "Content-Type", "value": "application/json" },
               {
                 "key": "Authorization",
                 "value": "Bearer {{api_key}}",
@@ -3649,17 +3558,8 @@
   "event": [
     {
       "listen": "prerequest",
-      "script": {
-        "type": "text/javascript",
-        "exec": [""]
-      }
+      "script": { "type": "text/javascript", "exec": [""] }
     },
-    {
-      "listen": "test",
-      "script": {
-        "type": "text/javascript",
-        "exec": [""]
-      }
-    }
+    { "listen": "test", "script": { "type": "text/javascript", "exec": [""] } }
   ]
 }

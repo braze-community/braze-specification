@@ -5755,7 +5755,8 @@
                   "body": "string",
                   "plaintext_body": "string",
                   "preheader": "string",
-                  "tags": ["string"]
+                  "tags": ["string"],
+                  "should_inline_css": true
                 },
                 "properties": {
                   "template_name": { "type": "string" },
@@ -5822,7 +5823,7 @@
           {
             "name": "should_inline_css",
             "in": "query",
-            "schema": { "type": "string" },
+            "schema": { "type": "boolean" },
             "description": "(Optional) Boolean"
           }
         ],
@@ -5865,7 +5866,8 @@
                   "body": "string",
                   "plaintext_body": "string",
                   "preheader": "string",
-                  "tags": ["string"]
+                  "tags": ["string"],
+                  "should_inline_css": true
                 },
                 "properties": {
                   "email_template_id": { "type": "string" },
@@ -5940,7 +5942,7 @@
           {
             "name": "should_inline_css",
             "in": "query",
-            "schema": { "type": "string" },
+            "schema": { "type": "boolean" },
             "description": "(Optional) Boolean"
           }
         ],

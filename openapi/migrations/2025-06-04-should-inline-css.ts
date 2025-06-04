@@ -4,9 +4,13 @@ import { traverse, writeSpec } from '../../utils';
 const should_inline_css = 'should_inline_css';
 
 traverse(spec, '', null, (value, key, parent) => {
-  // delete default value since parameter is optional
-  if (key === should_inline_css && value === false) {
-    delete parent[should_inline_css];
+  // fix schema type
+  if (
+    key === 'name' &&
+    value === should_inline_css &&
+    parent.schema?.type === 'string'
+  ) {
+    parent.schema.type = 'boolean';
   }
 });
 

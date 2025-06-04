@@ -256,7 +256,7 @@ traverse(collection, '', null, (value, key, parent) => {
       try {
         return JSON.parse(parent.request.body.raw);
       } catch (error) {
-        console.log(parent.request.body.raw);
+        console.warn(parent.request.body.raw);
         throw new Error(`Invalid JSON for name: "${value}"`);
       }
   }

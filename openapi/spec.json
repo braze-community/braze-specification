@@ -5755,8 +5755,7 @@
                   "body": "string",
                   "plaintext_body": "string",
                   "preheader": "string",
-                  "tags": ["string"],
-                  "should_inline_css": true
+                  "tags": ["string"]
                 },
                 "properties": {
                   "template_name": { "type": "string" },
@@ -5866,8 +5865,7 @@
                   "body": "string",
                   "plaintext_body": "string",
                   "preheader": "string",
-                  "tags": ["string"],
-                  "should_inline_css": true
+                  "tags": ["string"]
                 },
                 "properties": {
                   "email_template_id": { "type": "string" },

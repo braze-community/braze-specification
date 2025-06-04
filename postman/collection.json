@@ -1928,7 +1928,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"broadcast\": \"false\",\n  \"external_user_ids\": \"external_user_identifiers\",\n  \"user_aliases\": {\n    \"alias_name\" : \"example_name\",\n    \"alias_label\" : \"example_label\"\n  },\n  \"segment_id\": \"segment_identifiers\",\n  \"audience\": {\n    \"AND\": [\n      {\n        \"custom_attribute\": {\n          \"custom_attribute_name\": \"eye_color\",\n          \"comparison\": \"equals\",\n          \"value\": \"blue\"\n        }\n      },\n      {\n        \"custom_attribute\": {\n          \"custom_attribute_name\": \"favorite_foods\",\n          \"comparison\": \"includes_value\",\n          \"value\": \"pizza\"\n        }\n      },\n      {\n        \"OR\": [\n          {\n            \"custom_attribute\": {\n              \"custom_attribute_name\": \"last_purchase_time\",\n              \"comparison\": \"less_than_x_days_ago\",\n              \"value\": 2\n            }\n          },\n          {\n            \"push_subscription_status\": {\n              \"comparison\": \"is\",\n              \"value\": \"opted_in\"\n            }\n          }\n        ]\n      },\n      {\n        \"email_subscription_status\": {\n          \"comparison\": \"is_not\",\n          \"value\": \"subscribed\"\n        }\n      },\n      {\n        \"last_used_app\": {\n          \"comparison\": \"after\",\n          \"value\": \"2019-07-22T13:17:55+0000\"\n        }\n      }\n    ]\n  },\n  \"campaign_id\": \"campaign_identifier\",\n  \"send_id\": \"send_identifier\",\n  \"override_messaging_limits\": false,\n  \"recipient_subscription_state\": \"subscribed\",\n  \"schedule\": {\n    \"time\": \"\",\n    \"in_local_time\": true,\n    \"at_optimal_time\": true\n  },\n  \"messages\": {\n    \"apple_push\": (optional, Apple Push Object),\n    \"android_push\": (optional, Android Push Object),\n    \"windows_push\": (optional, Windows Phone 8 Push Object),\n    \"windows8_push\": (optional, Windows Universal Push Object),\n    \"kindle_push\": (optional, Kindle/FireOS Push Object),\n    \"web_push\": (optional, Web Push Object),\n    \"email\": (optional, Email object)\n    \"webhook\": (optional, Webhook object)\n    \"content_card\": (optional, Content Card Object)\n  }\n}",
+                  "raw": "{\"broadcast\":false,\"external_user_ids\":\"external_user_identifiers\",\"user_aliases\":{\"alias_name\":\"example_name\",\"alias_label\":\"example_label\"},\"segment_id\":\"segment_identifiers\",\"audience\":{\"AND\":[{\"custom_attribute\":{\"custom_attribute_name\":\"eye_color\",\"comparison\":\"equals\",\"value\":\"blue\"}},{\"custom_attribute\":{\"custom_attribute_name\":\"favorite_foods\",\"comparison\":\"includes_value\",\"value\":\"pizza\"}},{\"OR\":[{\"custom_attribute\":{\"custom_attribute_name\":\"last_purchase_time\",\"comparison\":\"less_than_x_days_ago\",\"value\":2}},{\"push_subscription_status\":{\"comparison\":\"is\",\"value\":\"opted_in\"}}]},{\"email_subscription_status\":{\"comparison\":\"is_not\",\"value\":\"subscribed\"}},{\"last_used_app\":{\"comparison\":\"after\",\"value\":\"2019-07-22T13:17:55+0000\"}}]},\"campaign_id\":\"campaign_identifier\",\"send_id\":\"send_identifier\",\"override_messaging_limits\":false,\"recipient_subscription_state\":\"subscribed\",\"schedule\":{\"time\":\"\",\"in_local_time\":true,\"at_optimal_time\":true},\"messages\":{\"apple_push\":{},\"android_push\":{},\"windows_push\":{},\"windows8_push\":{},\"kindle_push\":{},\"web_push\":{},\"email\":{},\"webhook\":{},\"content_card\":{}}}",
                   "options": { "raw": { "language": "json" } }
                 },
                 "url": {
@@ -2151,7 +2151,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"external_send_id\" : YOUR_BASE64_COMPATIBLE_ID,\n    \"trigger_properties\": {\n        \"example_string_property\": YOUR_EXAMPLE_STRING,\n        \"example_integer_property\": YOUR_EXAMPLE_INTEGER\n    },\n    \"recipient\": [\n        {\n        \"external_user_id\": TARGETED_USER_ID_STRING\n        }\n    ]\n}"
+                  "raw": "{\"external_send_id\":\"YOUR_BASE64_COMPATIBLE_ID\",\"trigger_properties\":{},\"recipient\":[{\"external_user_id\":\"TARGETED_USER_ID_STRING\"}]}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/transactional/v1/campaigns/{campaign_id}/send",
@@ -2331,7 +2331,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"string\",\n  \"preference_center_title\": \"string\",\n  \"preference_center_page_html\": \"string\",\n  \"confirmation_page_html\": \"string\",\n  \"state\": (optional) Choose `active` or `draft`. Defaults to `active` if not specified,\n  \"options\": {\n    \"meta-viewport-content\": \"string\", (optional) Only the `content` value of the meta tag\n  }\n}"
+              "raw": "{\"name\":\"string\",\"preference_center_title\":\"string\",\"preference_center_page_html\":\"string\",\"confirmation_page_html\":\"string\",\"state\":\"active\",\"options\":{\"meta-viewport-content\":\"string\"}}"
             },
             "url": {
               "raw": "https://{{instance_url}}/preference_center/v1",
@@ -2361,7 +2361,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"preference_center_name\",\n  \"preference_center_title\": \"string\",\n  \"preference_center_page_html\": \"string\",\n  \"confirmation_page_html\": \"string\",\n  \"options\": {\n    \"meta-viewport-content\": \"string\", (optional) Only the `content` value of the meta tag\n  }\n}"
+              "raw": "{\"name\":\"preference_center_name\",\"preference_center_title\":\"string\",\"preference_center_page_html\":\"string\",\"confirmation_page_html\":\"string\",\"options\":{\"meta-viewport-content\":\"string\"}}"
             },
             "url": {
               "raw": "https://{{instance_url}}/preference_center/v1/{PreferenceCenterExternalID}",
@@ -2624,7 +2624,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"phone_numbers\": (required, array of string in e.164 format)\n}"
+              "raw": "{\"phone_numbers\":[\"string\"]}"
             },
             "url": {
               "raw": "https://{{instance_url}}/sms/invalid_phone_numbers/remove",
@@ -2749,7 +2749,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "\"subscription_groups\":[\n    {\n      \"subscription_group_id\": (required, string),\n      \"subscription_state\": (required, string)\n      \"external_ids\": (required*, array of strings),\n      \"emails\": (required*, array of strings),\n      \"phones\": (required*, array of strings in E.164 format),\n    }\n  ]",
+                  "raw": "{\"subscription_groups\":[{\"subscription_group_id\":\"string\",\"subscription_state\":\"string\",\"external_ids\":[\"string\"],\"emails\":[\"string\"],\"phones\":[\"string\"]}]}",
                   "options": { "raw": { "language": "json" } }
                 },
                 "url": {
@@ -2780,7 +2780,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n   \"subscription_group_id\": (required, string) the id of your subscription group,\n   \"subscription_state\": (required, string) available values are \"unsubscribed\" (not in subscription group) or \"subscribed\" (in subscription group),\n   \"external_id\": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,\n   \"email\": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),\n   // Email subscription group - one of external_id or email is required\n   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles\n }"
+                  "raw": "{\"subscription_group_id\":\"string\",\"subscription_state\":\"string\",\"external_id\":[\"string\"],\"email\":[\"string\"]}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/subscription/status/set",
@@ -2896,7 +2896,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "\"subscription_groups\":[\n    {\n      \"subscription_group_id\": (required, string),\n      \"subscription_state\": (required, string)\n      \"external_ids\": (required*, array of strings),\n      \"emails\": (required*, array of strings),\n      \"phones\": (required*, array of strings in E.164 format),\n    }\n  ]"
+                  "raw": "{\"subscription_groups\":[{\"subscription_group_id\":\"string\",\"subscription_state\":\"string\",\"external_ids\":[\"string\"],\"emails\":[\"string\"],\"phones\":[\"string\"]}]}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/v2/subscription/status/set",
@@ -2926,7 +2926,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n   \"subscription_group_id\": (required, string) the id of your subscription group,\n   \"subscription_state\": (required, string) available values are \"unsubscribed\" (not in subscription group) or \"subscribed\" (in subscription group),\n   \"external_id\": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,\n   \"phone\": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),\n   // SMS subscription group - one of external_id or phone is required\n }"
+                  "raw": "{\"subscription_group_id\":\"string\",\"subscription_state\":\"string\",\"external_id\":[\"string\"],\"email\":[\"string\"]}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/subscription/status/set",
@@ -3043,7 +3043,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"name\": (required, string) Must be less than 100 characters,\n  \"description\": (optional, string) The description of the Content Block. Must be less than 250 character,\n  \"content\": (required, string) HTML or text content within Content Block,\n  \"state\": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,\n  \"tags\": (optional, array of strings) Tags must already exist\n}\n"
+                  "raw": "{\"name\":\"string\",\"description\":\"string\",\"content\":\"string\",\"state\":\"active\",\"tags\":[\"string\"]}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/content_blocks/create",
@@ -3083,7 +3083,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"content_block_id\" : (required, string) Content Block's API identifier.\n  \"name\": (optional, string) Must be less than 100 characters,\n  \"description\": (optional, string) The description of the Content Block. Must be less than 250 character,\n  \"content\": (optional, string) HTML or text content within Content Block,\n  \"state\": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,\n  \"tags\": (optional, array of strings) Tags must already exist\n}"
+                  "raw": "{\"content_block_id\":\"string\",\"name\":\"string\",\"description\":\"string\",\"content\":\"string\",\"state\":\"active\",\"tags\":[\"string\"]}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/content_blocks/update",
@@ -3190,7 +3190,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n   \"template_name\": (required, string) The name of your email template,\n   \"subject\": (required, string) The email template subject line,\n   \"body\": (required, string) The email template body that may include HTML,\n   \"plaintext_body\": (optional, string) A plaintext version of the email template body,\n   \"preheader\": (optional, string) The email preheader used to generate previews in some clients,\n   \"tags\": (optional, Array of Strings) Tags must already exist,\n   \"should_inline_css\": (optional, Boolean) If `true`, the `inline_css` feature is used on this template.\n }"
+                  "raw": "{\"template_name\":\"string\",\"subject\":\"string\",\"body\":\"string\",\"plaintext_body\":\"string\",\"preheader\":\"string\",\"tags\":[\"string\"],\"should_inline_css\":true}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/templates/email/create?template_name&subject&body&plaintext_body&preheader&tags&should_inline_css",
@@ -3257,7 +3257,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"email_template_id\": (required, string) Your email template's API Identifier,\n  \"template_name\": (optional, string) The name of your email template,\n  \"subject\": (optional, string) The email template subject line,\n  \"body\": (optional, string) The email template body that may include HTML,\n  \"plaintext_body\": (optional, string) A plaintext version of the email template body,\n  \"preheader\": (optional, string) The email preheader used to generate previews in some clients,\n  \"tags\": (optional, array of Strings) Tags must already exist,\n  \"should_inline_css\": (optional, Boolean) If `true`, the `inline_css` feature will be applied to the template.\n}",
+                  "raw": "{\"email_template_id\":\"string\",\"template_name\":\"string\",\"subject\":\"string\",\"body\":\"string\",\"plaintext_body\":\"string\",\"preheader\":\"string\",\"tags\":[\"string\"],\"should_inline_css\":true}",
                   "options": { "raw": { "language": "json" } }
                 },
                 "url": {
@@ -3371,7 +3371,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"external_ids\" :[\n    \"existing_deprecated_external_id_string\",\n    ...\n  ]\n}"
+                  "raw": "{\"external_ids\":[\"existing_deprecated_external_id_string\"]}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/users/external_ids/remove",
@@ -3456,7 +3456,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"aliases_to_identify\": [\n    {\n      \"external_id\": \"external_identifier\",\n      \"user_alias\": {\n        \"alias_name\" : \"example_alias\",\n        \"alias_label\" : \"example_label\"\n        }\n    }\n  ],\n  \"email_addresses\": [\n    {\n      \"external_id\": \"external_identifier\",\n      \"email\": \"john.smith@example.com\"\n      \"prioritization\": [\"unidentified\", \"most_recently_updated\"]\n    }\n  ],\n  \"merge_behavior\": \"merge\"\n}"
+              "raw": "{\"aliases_to_identify\":[{\"external_id\":\"external_identifier\",\"user_alias\":{\"alias_name\":\"example_alias\",\"alias_label\":\"example_label\"}}],\"email_addresses\":[{\"external_id\":\"external_identifier\",\"email\":\"john.smith@example.com\",\"prioritization\":[\"unidentified\",\"most_recently_updated\"]}],\"merge_behavior\":\"merge\"}"
             },
             "url": {
               "raw": "https://{{instance_url}}/users/identify",
@@ -3539,7 +3539,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"merge_updates\": [\n    {\n      \"identifier_to_merge\": {\n        \"external_id\": \"old-user1\"\n      },\n      \"identifier_to_keep\": {\n        \"external_id\": \"current-user1\"\n      }\n    },\n    {\n      \"identifier_to_merge\": {\n        \"email\": \"user1@braze.com\",\n        \"prioritization\": [\"unidentified\", \"most_recently_updated\"]\n      },\n      \"identifier_to_keep\":  {\n        \"email\": \"user2@braze.com\",\n        \"prioritization\": [\"identified\", \"most_recently_updated\"]\n      }\n    },\n    {\n      \"identifier_to_merge\": {\n        \"user_alias\": {\n          \"alias_name\": \"old-user2@example.com\",\n          \"alias_label\": \"email\"\n        }\n      },\n      \"identifier_to_keep\": {\n        \"user_alias\": {\n          \"alias_name\": \"current-user2@example.com\",\n          \"alias_label\": \"email\"\n        }\n      }\n    }\n  ]\n}'"
+              "raw": "{\"merge_updates\":[{\"identifier_to_merge\":{\"external_id\":\"old-user1\"},\"identifier_to_keep\":{\"external_id\":\"current-user1\"}},{\"identifier_to_merge\":{\"email\":\"user1@braze.com\",\"prioritization\":[\"unidentified\",\"most_recently_updated\"]},\"identifier_to_keep\":{\"email\":\"user2@braze.com\",\"prioritization\":[\"identified\",\"most_recently_updated\"]}},{\"identifier_to_merge\":{\"user_alias\":{\"alias_name\":\"old-user2@example.com\",\"alias_label\":\"email\"}},\"identifier_to_keep\":{\"user_alias\":{\"alias_name\":\"current-user2@example.com\",\"alias_label\":\"email\"}}}]}"
             },
             "url": {
               "raw": "https://{{instance_url}}/users/merge",

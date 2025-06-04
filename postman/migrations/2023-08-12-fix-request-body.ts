@@ -2,12 +2,12 @@ import collection from '../collection.json';
 import { traverse, writeCollection } from '../../utils';
 
 traverse(collection, '', null, (value, key, parent) => {
-  if (key !== 'name') {
+  if (key !== 'name' || typeof parent?.request?.body?.raw !== 'string') {
     return;
   }
 
   switch (value) {
-    case 'Create Scheduled Messages':
+    case 'Create scheduled messages':
       return (parent.request.body.raw = JSON.stringify({
         broadcast: false,
         external_user_ids: 'external_user_identifiers',
@@ -85,13 +85,10 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
-    case 'Send Transactional Email via API Triggered Delivery':
+    case 'Send Transactional Email using API-triggered delivery':
       return (parent.request.body.raw = JSON.stringify({
         external_send_id: 'YOUR_BASE64_COMPATIBLE_ID',
-        trigger_properties: {
-          example_string_property: 'YOUR_EXAMPLE_STRING',
-          example_integer_property: 'YOUR_EXAMPLE_INTEGER',
-        },
+        trigger_properties: {},
         recipient: [
           {
             external_user_id: 'TARGETED_USER_ID_STRING',
@@ -99,21 +96,7 @@ traverse(collection, '', null, (value, key, parent) => {
         ],
       }));
 
-    case 'Update Preference Center':
-      return (parent.request.body.raw = JSON.stringify({
-        external_send_id: 'YOUR_BASE64_COMPATIBLE_ID',
-        trigger_properties: {
-          example_string_property: 'YOUR_EXAMPLE_STRING',
-          example_integer_property: 'YOUR_EXAMPLE_INTEGER',
-        },
-        recipient: [
-          {
-            external_user_id: 'TARGETED_USER_ID_STRING',
-          },
-        ],
-      }));
-
-    case 'Update Preference Center':
+    case 'Update preference center':
       return (parent.request.body.raw = JSON.stringify({
         name: 'preference_center_name',
         preference_center_title: 'string',
@@ -124,7 +107,7 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
-    case 'Create Preference Center':
+    case 'Create preference center':
       return (parent.request.body.raw = JSON.stringify({
         name: 'string',
         preference_center_title: 'string',
@@ -136,21 +119,146 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
-    case "Update User's Subscription Group Status V2":
+    case "Update user's subscription group status (V2)":
       return (parent.request.body.raw = JSON.stringify({
         subscription_groups: [
           {
-            subscription_group_id: 'subscription_group_identifier',
-            subscription_state: 'subscribed',
-            emails: ['example1@email.com', 'example2@email.com'],
+            subscription_group_id: 'string',
+            subscription_state: 'string',
+            external_ids: ['string'],
+            emails: ['string'],
+            phones: ['string'],
           },
         ],
       }));
 
-    case 'Remove External ID':
+    case "Update user's subscription group status":
+      return (parent.request.body.raw = JSON.stringify({
+        subscription_group_id: 'string',
+        subscription_state: 'string',
+        external_id: ['string'],
+        email: ['string'],
+      }));
+
+    case 'Create Content Block':
+      return (parent.request.body.raw = JSON.stringify({
+        name: 'string',
+        description: 'string',
+        content: 'string',
+        state: 'active',
+        tags: ['string'],
+      }));
+
+    case 'Update Content Block':
+      return (parent.request.body.raw = JSON.stringify({
+        content_block_id: 'string',
+        name: 'string',
+        description: 'string',
+        content: 'string',
+        state: 'active',
+        tags: ['string'],
+      }));
+
+    case 'Create email template':
+      return (parent.request.body.raw = JSON.stringify({
+        template_name: 'string',
+        subject: 'string',
+        body: 'string',
+        plaintext_body: 'string',
+        preheader: 'string',
+        tags: ['string'],
+        should_inline_css: true,
+      }));
+
+    case 'Update email template':
+      return (parent.request.body.raw = JSON.stringify({
+        email_template_id: 'string',
+        template_name: 'string',
+        subject: 'string',
+        body: 'string',
+        plaintext_body: 'string',
+        preheader: 'string',
+        tags: ['string'],
+        should_inline_css: true,
+      }));
+
+    case 'Identify users':
+      return (parent.request.body.raw = JSON.stringify({
+        aliases_to_identify: [
+          {
+            external_id: 'external_identifier',
+            user_alias: {
+              alias_name: 'example_alias',
+              alias_label: 'example_label',
+            },
+          },
+        ],
+        email_addresses: [
+          {
+            external_id: 'external_identifier',
+            email: 'john.smith@example.com',
+            prioritization: ['unidentified', 'most_recently_updated'],
+          },
+        ],
+        merge_behavior: 'merge',
+      }));
+
+    case 'Merge users':
+      return (parent.request.body.raw = JSON.stringify({
+        merge_updates: [
+          {
+            identifier_to_merge: {
+              external_id: 'old-user1',
+            },
+            identifier_to_keep: {
+              external_id: 'current-user1',
+            },
+          },
+          {
+            identifier_to_merge: {
+              email: 'user1@braze.com',
+              prioritization: ['unidentified', 'most_recently_updated'],
+            },
+            identifier_to_keep: {
+              email: 'user2@braze.com',
+              prioritization: ['identified', 'most_recently_updated'],
+            },
+          },
+          {
+            identifier_to_merge: {
+              user_alias: {
+                alias_name: 'old-user2@example.com',
+                alias_label: 'email',
+              },
+            },
+            identifier_to_keep: {
+              user_alias: {
+                alias_name: 'current-user2@example.com',
+                alias_label: 'email',
+              },
+            },
+          },
+        ],
+      }));
+
+    case 'Remove external ID':
       return (parent.request.body.raw = JSON.stringify({
         external_ids: ['existing_deprecated_external_id_string'],
       }));
+
+    case 'Remove invalid phone numbers':
+      return (parent.request.body.raw = JSON.stringify({
+        phone_numbers: ['string'],
+      }));
+
+    // expect no errors
+    default:
+      try {
+        return JSON.parse(parent.request.body.raw);
+      } catch (error) {
+        console.log(parent.request.body.raw);
+        throw new Error(`Invalid JSON for name: "${value}"`);
+      }
   }
 });
 

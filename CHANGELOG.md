@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/braze-community/braze-specification/compare/v1.3.0...v1.3.1) (2025-06-04)
+
+
+### Bug Fixes
+
+* **postman:** fix migrations and regenerate openapi spec ([b5e74aa](https://github.com/braze-community/braze-specification/commit/b5e74aa04c5483ff72e903818645e419adb7372c))
+
 ## [1.3.0](https://github.com/braze-community/braze-specification/compare/v1.2.4...v1.3.0) (2025-06-04)
 
 

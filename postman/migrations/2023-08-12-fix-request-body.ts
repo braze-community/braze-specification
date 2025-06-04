@@ -167,7 +167,7 @@ traverse(collection, '', null, (value, key, parent) => {
         plaintext_body: 'string',
         preheader: 'string',
         tags: ['string'],
-        should_inline_css: false,
+        should_inline_css: true,
       }));
 
     case 'Update email template':
@@ -179,7 +179,7 @@ traverse(collection, '', null, (value, key, parent) => {
         plaintext_body: 'string',
         preheader: 'string',
         tags: ['string'],
-        should_inline_css: false,
+        should_inline_css: true,
       }));
 
     case 'Identify users':

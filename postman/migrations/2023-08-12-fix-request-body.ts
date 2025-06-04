@@ -2,7 +2,7 @@ import collection from '../collection.json';
 import { traverse, writeCollection } from '../../utils';
 
 traverse(collection, '', null, (value, key, parent) => {
-  if (key !== 'name' || typeof parent?.request?.body?.raw !== 'string') {
+  if (key !== 'name' || typeof parent.request?.body?.raw !== 'string') {
     return;
   }
 

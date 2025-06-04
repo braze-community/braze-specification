@@ -4,8 +4,7 @@ import { traverse, writeCollection } from '../../utils';
 traverse(collection, '', null, (value, key, parent) => {
   if (
     key === 'name' &&
-    value === "Update User's Subscription Group Status V2" &&
-    parent?.request?.url?.raw ===
+    parent.request?.url?.raw ===
       'https://{{instance_url}} /v2/subscription/status/set'
   ) {
     Object.keys(parent).forEach((key) => {

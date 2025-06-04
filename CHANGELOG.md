@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.3.0](https://github.com/braze-community/braze-specification/compare/v1.2.4...v1.3.0) (2025-06-04)
+
+
+### Features
+
+* **postman:** update latest collection ([0c62d12](https://github.com/braze-community/braze-specification/commit/0c62d12393d94dc110b74cd06674f2204fe7df70))
+
+
+### Bug Fixes
+
+* **openapi:** add migration to remove redundant path in spec ([decedad](https://github.com/braze-community/braze-specification/commit/decedad701d8eeefd4486acc57a0645f7de37062))
+* **openapi:** update spec.json ([6fd00a4](https://github.com/braze-community/braze-specification/commit/6fd00a4e1b70d070c93d4057873da079730028ee))
+* **postman:** fix invalid JSON in migration 2023-08-12-fix-request-body ([d26eaed](https://github.com/braze-community/braze-specification/commit/d26eaed5c7c9b096e7a4e9c1de79323749ff6c61))
+* **postman:** run migrations on collection.json ([bcc02ad](https://github.com/braze-community/braze-specification/commit/bcc02ad465b2e1dd84a32eaa4bc515f50b4d4cfc))
+
 ## [1.2.4](https://github.com/braze-community/braze-specification/compare/v1.2.3...v1.2.4) (2024-10-14)
 
 

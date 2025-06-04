@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/braze-community/braze-specification/compare/v1.3.1...v1.3.2) (2025-06-04)
+
+
+### Bug Fixes
+
+* **openapi:** don't set default value for `should_inline_css` ([df3b945](https://github.com/braze-community/braze-specification/commit/df3b9455769f9100b2f35c239d04b5627742abf7))
+
 ## [1.3.1](https://github.com/braze-community/braze-specification/compare/v1.3.0...v1.3.1) (2025-06-04)
 
 

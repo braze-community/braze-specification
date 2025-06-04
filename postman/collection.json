@@ -3171,7 +3171,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"template_name\":\"string\",\"subject\":\"string\",\"body\":\"string\",\"plaintext_body\":\"string\",\"preheader\":\"string\",\"tags\":[\"string\"],\"should_inline_css\":true}"
+                  "raw": "{\"template_name\":\"string\",\"subject\":\"string\",\"body\":\"string\",\"plaintext_body\":\"string\",\"preheader\":\"string\",\"tags\":[\"string\"],\"should_inline_css\":false}"
                 },
                 "url": {
                   "raw": "https://{{instance_url}}/templates/email/create?template_name&subject&body&plaintext_body&preheader&tags&should_inline_css",
@@ -3238,7 +3238,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\"email_template_id\":\"string\",\"template_name\":\"string\",\"subject\":\"string\",\"body\":\"string\",\"plaintext_body\":\"string\",\"preheader\":\"string\",\"tags\":[\"string\"],\"should_inline_css\":true}",
+                  "raw": "{\"email_template_id\":\"string\",\"template_name\":\"string\",\"subject\":\"string\",\"body\":\"string\",\"plaintext_body\":\"string\",\"preheader\":\"string\",\"tags\":[\"string\"],\"should_inline_css\":false}",
                   "options": { "raw": { "language": "json" } }
                 },
                 "url": {

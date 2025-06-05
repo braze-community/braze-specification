@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.4](https://github.com/braze-community/braze-specification/compare/v1.3.3...v1.3.4) (2025-06-05)
+
+
+### Bug Fixes
+
+* **openapi:** change `canvas_entry_properties` type from string to object ([cdfc230](https://github.com/braze-community/braze-specification/commit/cdfc230fc9282e20bed5fb8e6950b65645d91e8d))
+
 ## [1.3.3](https://github.com/braze-community/braze-specification/compare/v1.3.2...v1.3.3) (2025-06-04)
 
 

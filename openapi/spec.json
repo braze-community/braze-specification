@@ -4301,7 +4301,7 @@
                       },
                       "external_user_id": "user_identifier",
                       "trigger_properties": {},
-                      "canvas_entry_properties": "",
+                      "canvas_entry_properties": {},
                       "send_to_existing_only": true,
                       "attributes": { "first_name": "Alex" }
                     }
@@ -4309,13 +4309,7 @@
                 },
                 "properties": {
                   "canvas_id": { "type": "string" },
-                  "canvas_entry_properties": {
-                    "type": "object",
-                    "properties": {
-                      "product_name": { "type": "string" },
-                      "product_price": { "type": "number" }
-                    }
-                  },
+                  "canvas_entry_properties": { "type": "object" },
                   "broadcast": { "type": "boolean" },
                   "audience": {
                     "type": "object",
@@ -4337,7 +4331,7 @@
                         },
                         "external_user_id": { "type": "string" },
                         "trigger_properties": { "type": "object" },
-                        "canvas_entry_properties": { "type": "string" },
+                        "canvas_entry_properties": { "type": "object" },
                         "send_to_existing_only": { "type": "boolean" },
                         "attributes": {
                           "type": "object",

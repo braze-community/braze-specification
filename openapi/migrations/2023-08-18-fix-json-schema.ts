@@ -4,9 +4,8 @@ import { traverse, writeSpec } from '../../utils';
 traverse(spec, '', null, (value, key, parent) => {
   switch (key) {
     case '/catalogs/{catalog_name}/items':
-      ['put'].forEach((method) => {
-        delete getSchemaProperties(key, method, value).items.items.properties;
-      });
+      delete getSchemaProperties(key, 'put', value).items.items.properties;
+      value.delete.requestBody = value.patch.requestBody;
       break;
 
     case '/catalogs/{catalog_name}/items/{item_id}':
@@ -16,12 +15,9 @@ traverse(spec, '', null, (value, key, parent) => {
       break;
 
     case '/users/track':
-      ['post'].forEach((method) => {
-        delete getSchemaProperties(key, method, value).attributes.items
-          .properties;
-        delete getSchemaProperties(key, method, value).purchases.items
-          .properties;
-      });
+      delete getSchemaProperties(key, 'post', value).attributes.items
+        .properties;
+      delete getSchemaProperties(key, 'post', value).purchases.items.properties;
       break;
   }
 

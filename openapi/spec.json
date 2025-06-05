@@ -373,6 +373,25 @@
           "404": { "$ref": "#/components/responses/NotFound" },
           "429": { "$ref": "#/components/responses/TooManyRequests" },
           "500": { "$ref": "#/components/responses/InternalServerError" }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": { "items": [{ "id": "restaurant1" }] },
+                "properties": {
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": { "id": { "type": "string" } }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "patch": {

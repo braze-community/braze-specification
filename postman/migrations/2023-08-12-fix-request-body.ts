@@ -11,7 +11,7 @@ traverse(collection, '', null, (value, key, parent) => {
     case 'Create scheduled messages':
       return (parent.request.body.raw = JSON.stringify({
         broadcast: false,
-        external_user_ids: 'external_user_identifiers',
+        external_user_ids: ['external_user_identifiers'],
         user_aliases: {
           alias_name: 'example_name',
           alias_label: 'example_label',

@@ -3134,7 +3134,7 @@
                 "type": "object",
                 "example": {
                   "broadcast": false,
-                  "external_user_ids": "external_user_identifiers",
+                  "external_user_ids": ["external_user_identifiers"],
                   "user_aliases": {
                     "alias_name": "example_name",
                     "alias_label": "example_label"
@@ -3210,7 +3210,10 @@
                 },
                 "properties": {
                   "broadcast": { "type": "boolean" },
-                  "external_user_ids": { "type": "string" },
+                  "external_user_ids": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
                   "user_aliases": {
                     "type": "object",
                     "properties": {

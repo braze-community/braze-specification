@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.7](https://github.com/braze-community/braze-specification/compare/v1.3.6...v1.3.7) (2025-06-06)
+
+
+### Bug Fixes
+
+* **postman:** fix `/users/identify` request body ([440748c](https://github.com/braze-community/braze-specification/commit/440748c7abd6a95454be65aa445e6ec58d2e5d75))
+
 ## [1.3.6](https://github.com/braze-community/braze-specification/compare/v1.3.5...v1.3.6) (2025-06-06)
 
 

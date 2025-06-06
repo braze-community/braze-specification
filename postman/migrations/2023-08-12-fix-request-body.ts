@@ -272,6 +272,12 @@ traverse(collection, '', null, (value, key, parent) => {
         phone_numbers: ['string'],
       }));
 
+    // POST /messages/send
+    case 'Send messages immediately using the API only':
+      const requestBody = JSON.parse(parent.request.body.raw);
+      requestBody.external_user_ids = ['external_user_identifiers'];
+      return (parent.request.body.raw = JSON.stringify(requestBody));
+
     // expect no errors
     default:
       try {

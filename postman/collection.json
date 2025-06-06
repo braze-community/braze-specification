@@ -3366,7 +3366,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"aliases_to_identify\":[{\"external_id\":\"external_identifier\",\"user_alias\":{\"alias_name\":\"example_alias\",\"alias_label\":\"example_label\"}}],\"email_addresses\":[{\"external_id\":\"external_identifier\",\"email\":\"john.smith@example.com\",\"prioritization\":[\"unidentified\",\"most_recently_updated\"]}],\"merge_behavior\":\"merge\"}"
+              "raw": "{\"aliases_to_identify\":[{\"external_id\":\"external_identifier\",\"user_alias\":{\"alias_name\":\"example_alias\",\"alias_label\":\"example_label\"}}],\"emails_to_identify\":[{\"external_id\":\"external_identifier_2\",\"email\":\"john.smith@braze.com\",\"prioritization\":[\"unidentified\",\"most_recently_updated\"]}],\"phone_numbers_to_identify\":[{\"external_id\":\"external_identifier_2\",\"phone\":\"+11112223333\",\"prioritization\":[\"unidentified\",\"most_recently_updated\"]}],\"merge_behavior\":\"merge\"}"
             },
             "url": {
               "raw": "https://{{instance_url}}/users/identify",

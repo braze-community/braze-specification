@@ -6287,10 +6287,20 @@
                       }
                     }
                   ],
-                  "email_addresses": [
+                  "emails_to_identify": [
                     {
-                      "external_id": "external_identifier",
-                      "email": "john.smith@example.com",
+                      "external_id": "external_identifier_2",
+                      "email": "john.smith@braze.com",
+                      "prioritization": [
+                        "unidentified",
+                        "most_recently_updated"
+                      ]
+                    }
+                  ],
+                  "phone_numbers_to_identify": [
+                    {
+                      "external_id": "external_identifier_2",
+                      "phone": "+11112223333",
                       "prioritization": [
                         "unidentified",
                         "most_recently_updated"
@@ -6316,13 +6326,27 @@
                       }
                     }
                   },
-                  "email_addresses": {
+                  "emails_to_identify": {
                     "type": "array",
                     "items": {
                       "type": "object",
                       "properties": {
                         "external_id": { "type": "string" },
                         "email": { "type": "string", "format": "email" },
+                        "prioritization": {
+                          "type": "array",
+                          "items": { "type": "string" }
+                        }
+                      }
+                    }
+                  },
+                  "phone_numbers_to_identify": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "external_id": { "type": "string" },
+                        "phone": { "type": "string" },
                         "prioritization": {
                           "type": "array",
                           "items": { "type": "string" }

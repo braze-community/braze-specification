@@ -7,6 +7,7 @@ traverse(collection, '', null, (value, key, parent) => {
   }
 
   switch (value) {
+    // POST /messages/schedule/create
     case 'Create scheduled messages':
       return (parent.request.body.raw = JSON.stringify({
         broadcast: false,
@@ -85,6 +86,7 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
+    // POST /transactional/v1/campaigns/{campaign_id}/send
     case 'Send Transactional Email using API-triggered delivery':
       return (parent.request.body.raw = JSON.stringify({
         external_send_id: 'YOUR_BASE64_COMPATIBLE_ID',
@@ -96,6 +98,7 @@ traverse(collection, '', null, (value, key, parent) => {
         ],
       }));
 
+    // PUT /preference_center/v1/{PreferenceCenterExternalID}
     case 'Update preference center':
       return (parent.request.body.raw = JSON.stringify({
         name: 'preference_center_name',
@@ -107,6 +110,7 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
+    // POST /preference_center/v1
     case 'Create preference center':
       return (parent.request.body.raw = JSON.stringify({
         name: 'string',
@@ -119,6 +123,7 @@ traverse(collection, '', null, (value, key, parent) => {
         },
       }));
 
+    // POST /v2/subscription/status/set
     case "Update user's subscription group status (V2)":
       return (parent.request.body.raw = JSON.stringify({
         subscription_groups: [
@@ -132,6 +137,7 @@ traverse(collection, '', null, (value, key, parent) => {
         ],
       }));
 
+    // POST /subscription/status/set
     case "Update user's subscription group status":
       return (parent.request.body.raw = JSON.stringify({
         subscription_group_id: 'string',
@@ -140,6 +146,7 @@ traverse(collection, '', null, (value, key, parent) => {
         email: ['string'],
       }));
 
+    // POST /content_blocks/create
     case 'Create Content Block':
       return (parent.request.body.raw = JSON.stringify({
         name: 'string',
@@ -149,6 +156,7 @@ traverse(collection, '', null, (value, key, parent) => {
         tags: ['string'],
       }));
 
+    // POST /content_blocks/update
     case 'Update Content Block':
       return (parent.request.body.raw = JSON.stringify({
         content_block_id: 'string',
@@ -159,6 +167,7 @@ traverse(collection, '', null, (value, key, parent) => {
         tags: ['string'],
       }));
 
+    // POST /templates/email/create
     case 'Create email template':
       return (parent.request.body.raw = JSON.stringify({
         template_name: 'string',
@@ -170,6 +179,7 @@ traverse(collection, '', null, (value, key, parent) => {
         should_inline_css: true,
       }));
 
+    // POST /templates/email/update
     case 'Update email template':
       return (parent.request.body.raw = JSON.stringify({
         email_template_id: 'string',
@@ -182,6 +192,7 @@ traverse(collection, '', null, (value, key, parent) => {
         should_inline_css: true,
       }));
 
+    // POST /users/identify
     case 'Identify users':
       return (parent.request.body.raw = JSON.stringify({
         aliases_to_identify: [
@@ -193,16 +204,24 @@ traverse(collection, '', null, (value, key, parent) => {
             },
           },
         ],
-        email_addresses: [
+        emails_to_identify: [
           {
-            external_id: 'external_identifier',
-            email: 'john.smith@example.com',
+            external_id: 'external_identifier_2',
+            email: 'john.smith@braze.com',
+            prioritization: ['unidentified', 'most_recently_updated'],
+          },
+        ],
+        phone_numbers_to_identify: [
+          {
+            external_id: 'external_identifier_2',
+            phone: '+11112223333',
             prioritization: ['unidentified', 'most_recently_updated'],
           },
         ],
         merge_behavior: 'merge',
       }));
 
+    // POST /users/merge
     case 'Merge users':
       return (parent.request.body.raw = JSON.stringify({
         merge_updates: [
@@ -241,11 +260,13 @@ traverse(collection, '', null, (value, key, parent) => {
         ],
       }));
 
+    // POST /users/external_ids/remove
     case 'Remove external ID':
       return (parent.request.body.raw = JSON.stringify({
         external_ids: ['existing_deprecated_external_id_string'],
       }));
 
+    // POST /sms/invalid_phone_numbers/remove
     case 'Remove invalid phone numbers':
       return (parent.request.body.raw = JSON.stringify({
         phone_numbers: ['string'],

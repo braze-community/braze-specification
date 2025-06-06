@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.6](https://github.com/braze-community/braze-specification/compare/v1.3.5...v1.3.6) (2025-06-06)
+
+
+### Bug Fixes
+
+* **postman:** fix item name and merge subscription groups ([dc94266](https://github.com/braze-community/braze-specification/commit/dc94266f8a4f5f666dd6c99151e53840493a63a9))
+
 ## [1.3.5](https://github.com/braze-community/braze-specification/compare/v1.3.4...v1.3.5) (2025-06-05)
 
 

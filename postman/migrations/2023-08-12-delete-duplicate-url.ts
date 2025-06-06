@@ -13,12 +13,4 @@ traverse(collection, '', null, (value, key, parent) => {
   }
 });
 
-traverse(collection, '', null, (value, key, parent) => {
-  if (key === 'name' && value === 'Email') {
-    parent.item = parent.item.filter(
-      (item: object) => Object.keys(item).length,
-    );
-  }
-});
-
 writeCollection(collection);

@@ -2658,7 +2658,7 @@
           "name": "Email",
           "item": [
             {
-              "name": "List user's  subscription group status",
+              "name": "List user's subscription group status",
               "request": {
                 "method": "GET",
                 "header": [
@@ -2688,6 +2688,11 @@
                       "key": "email",
                       "value": "example@braze.com",
                       "description": "(Required* ) String\n\nThe email address of the user. It can be passed as an array of strings with a maximum of 50.\n\nSubmitting both an email address and phone number (with no `external_id`) will result in an error."
+                    },
+                    {
+                      "key": "phone",
+                      "value": "+11112223333",
+                      "description": "(Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format\n\nThe phone number of the user. If email is not included, you must include at least one phone number (with a maximum of 50).\n\nSubmitting both an email address and phone number (with no `external_id`) will result in an error."
                     }
                   ]
                 },
@@ -2736,6 +2741,11 @@
                       "key": "offset",
                       "value": 0,
                       "description": "(Optional) Integer\n\nNumber of templates to skip before returning the rest of the templates that fit the search criteria."
+                    },
+                    {
+                      "key": "phone",
+                      "value": "+11112223333",
+                      "description": "(Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format\n\nThe phone number of the user. Must include at least one phone number (with a maximum of 50)."
                     }
                   ]
                 },
@@ -2778,87 +2788,6 @@
         {
           "name": "SMS and WhatsApp",
           "item": [
-            {
-              "name": "List user's subscription group status",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{api_key}}",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "https://{{instance_url}}/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id={{external_identifier}}&phone=+11112223333",
-                  "protocol": "https",
-                  "host": ["{{instance_url}}"],
-                  "path": ["subscription", "status", "get"],
-                  "query": [
-                    {
-                      "key": "subscription_group_id",
-                      "value": "{{subscription_group_id}}",
-                      "description": "(Required) String\n\nThe `id` of your subscription group."
-                    },
-                    {
-                      "key": "external_id",
-                      "value": "{{external_identifier}}",
-                      "description": "(Required*) String\n\nThe `external_id` of the user (must include at least one and at most 50 `external_ids`).\n\nWhen both an `external_id` and `email`/`phone` are submitted, only the `external_id`(s) provided will be applied to the result query."
-                    },
-                    {
-                      "key": "phone",
-                      "value": "+11112223333",
-                      "description": "(Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format\n\nThe phone number of the user. If email is not included, you must include at least one phone number (with a maximum of 50).\n\nSubmitting both an email address and phone number (with no `external_id`) will result in an error."
-                    }
-                  ]
-                },
-                "description": "> Use this endpoint to get the subscription state of a user in a subscription group. \n  \n\nThese groups will be available on the **Subscription Group** page. The response from this endpoint will include the external ID and either subscribed, unsubscribed, or unknown for the specific subscription group requested in the API call. This can be used to update the subscription group state in subsequent API calls or to be displayed on a hosted web page.\n\n## Prerequisites\n\nTo use this endpoint, you’ll need an [API key](https://www.braze.com/docs/api/basics#rest-api-key/) with the `subscription.status.get` permission.\n\n## Rate limit\n\nWe apply the default Braze rate limit of 250,000 requests per hour to this endpoint, as documented in [API rate limits](https://www.braze.com/docs/api/api_limits/).\n\n## Request parameters\n\n| Parameter | Required | Data Type | Description |\n| --- | --- | --- | --- |\n| [<code>subscription_group_id</code>](https://www.braze.com/docs/api/identifier_types/?tab=subscription%20group%20ids) | Required | String | The `id` of your subscription group. |\n| `external_id` | Required\\* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`).  <br>  <br>When both an `external_id` and `email`/`phone` are submitted, only the `external_id`(s) provided will be applied to the result query. |\n| `phone` | Required\\* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user. If email is not included, you must include at least one phone number (with a maximum of 50).  <br>  <br>Submitting both an email address and phone number (with no `external_id`) will result in an error. |\n\nOne of `external_id` or `email` or `phone` is required for each user.\n\n- For SMS and WhatsApp subscription groups, either `external_id` or `phone` is required. When both are submitted, only the `external_id` is used for querying and the phone number is applied to that user.\n    \n\n## Example request\n\n### Multiple users\n\n``` json\n1\nhttps://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2\n\n ```\n\n### SMS and WhatsApp\n\n``` json\ncurl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \\\n--header 'Authorization: Bearer YOUR-REST-API-KEY'\n\n ```"
-              },
-              "response": []
-            },
-            {
-              "name": "List user's subscription group",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{api_key}}",
-                    "type": "text"
-                  }
-                ],
-                "url": {
-                  "raw": "https://{{instance_url}}/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333",
-                  "protocol": "https",
-                  "host": ["{{instance_url}}"],
-                  "path": ["subscription", "user", "status"],
-                  "query": [
-                    {
-                      "key": "external_id",
-                      "value": "{{external_id}}",
-                      "description": "(Required*) String\n\nThe external_id of the user (must include at least one and at most 50 external_ids)."
-                    },
-                    {
-                      "key": "limit",
-                      "value": 100,
-                      "description": "(Optional) Integer\n\nThe limit on the maximum number of results returned. Default (and maximum) limit is 100."
-                    },
-                    {
-                      "key": "offset",
-                      "value": 1,
-                      "description": "(Optional) Integer\n\nNumber of templates to skip before returning the rest of the templates that fit the search criteria."
-                    },
-                    {
-                      "key": "phone",
-                      "value": "+11112223333",
-                      "description": "(Required*) String in [E.164](https://en.wikipedia.org/wiki/E.164) format\n\nThe phone number of the user. Must include at least one phone number (with a maximum of 50)."
-                    }
-                  ]
-                },
-                "description": "> Use this endpoint to list and get the subscription groups of a certain user. \n  \n\n## Prequisites\n\nTo use this endpoint, you’ll need an [API key](https://www.braze.com/docs/api/basics#rest-api-key/) with the `subscription.groups.get` permission.\n\n## Rate limit\n\nWe apply the default Braze rate limit of 250,000 requests per hour to this endpoint, as documented in [API rate limits](https://www.braze.com/docs/api/api_limits/).\n\n> If there are multiple users (multiple `external_ids`) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group). \n  \n\n## Example request\n\n### Multiple users\n\n`https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`\n\n### SMS and WhatsApp\n\n``` json\ncurl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \\\n--header 'Authorization: Bearer YOUR-REST-API-KEY'\n\n ```"
-              },
-              "response": []
-            },
             {
               "name": "Update user's subscription group status (V2)",
               "request": {

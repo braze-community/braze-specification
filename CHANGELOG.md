@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.8](https://github.com/braze-community/braze-specification/compare/v1.3.7...v1.3.8) (2025-06-06)
+
+
+### Bug Fixes
+
+* **postman:** fix external_user_ids in 2023-08-12-fix-request-body ([b635f1d](https://github.com/braze-community/braze-specification/commit/b635f1d59beea6c5b86d1401df9654aa6c5323c5))
+
 ## [1.3.7](https://github.com/braze-community/braze-specification/compare/v1.3.6...v1.3.7) (2025-06-06)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.9](https://github.com/braze-community/braze-specification/compare/v1.3.8...v1.3.9) (2025-06-06)
+
+
+### Bug Fixes
+
+* **postman:** correct external_user_ids type in /messages/send ([2304574](https://github.com/braze-community/braze-specification/commit/230457451675b0d2f8631e24fc1071204cb7367e))
+
 ## [1.3.8](https://github.com/braze-community/braze-specification/compare/v1.3.7...v1.3.8) (2025-06-06)
 
 

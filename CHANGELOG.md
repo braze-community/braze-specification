@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.10](https://github.com/braze-community/braze-specification/compare/v1.3.9...v1.3.10) (2025-06-07)
+
+
+### Bug Fixes
+
+* **postman:** fix messages type in /messages/send ([4edbbd1](https://github.com/braze-community/braze-specification/commit/4edbbd1b01b70b7a78cdb870a70d3a8a1949a4ef))
+
 ## [1.3.9](https://github.com/braze-community/braze-specification/compare/v1.3.8...v1.3.9) (2025-06-06)
 
 

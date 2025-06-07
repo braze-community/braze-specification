@@ -3943,14 +3943,14 @@
                   "override_frequency_capping": "false",
                   "recipient_subscription_state": "all",
                   "messages": {
-                    "android_push": "(optional, Android Push Object)",
-                    "apple_push": "(optional, Apple Push Object)",
-                    "content_card": "(optional, Content Card Object)",
-                    "email": "(optional, Email Object)",
-                    "kindle_push": "(optional, Kindle/FireOS Push Object)",
-                    "web_push": "(optional, Web Push Object)",
-                    "windows_phone8_push": "(optional, Windows Phone 8 Push Object)",
-                    "windows_universal_push": "(optional, Windows Universal Push Object)"
+                    "android_push": {},
+                    "apple_push": {},
+                    "content_card": {},
+                    "email": {},
+                    "kindle_push": {},
+                    "web_push": {},
+                    "windows_phone8_push": {},
+                    "windows_universal_push": {}
                   }
                 },
                 "properties": {
@@ -3980,14 +3980,14 @@
                   "messages": {
                     "type": "object",
                     "properties": {
-                      "android_push": { "type": "string" },
-                      "apple_push": { "type": "string" },
-                      "content_card": { "type": "string" },
-                      "email": { "type": "string" },
-                      "kindle_push": { "type": "string" },
-                      "web_push": { "type": "string" },
-                      "windows_phone8_push": { "type": "string" },
-                      "windows_universal_push": { "type": "string" }
+                      "android_push": { "type": "object" },
+                      "apple_push": { "type": "object" },
+                      "content_card": { "type": "object" },
+                      "email": { "type": "object" },
+                      "kindle_push": { "type": "object" },
+                      "web_push": { "type": "object" },
+                      "windows_phone8_push": { "type": "object" },
+                      "windows_universal_push": { "type": "object" }
                     }
                   }
                 }

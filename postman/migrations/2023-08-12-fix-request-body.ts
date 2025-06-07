@@ -276,6 +276,9 @@ traverse(collection, '', null, (value, key, parent) => {
     case 'Send messages immediately using the API only':
       const requestBody = JSON.parse(parent.request.body.raw);
       requestBody.external_user_ids = ['external_user_identifiers'];
+      for (const key in requestBody.messages) {
+        requestBody.messages[key] = {};
+      }
       return (parent.request.body.raw = JSON.stringify(requestBody));
 
     // expect no errors

@@ -43,6 +43,10 @@ import spec from 'braze-specification/openapi/spec.json';
 import collection from 'braze-specification/postman/collection.json';
 ```
 
+## Contributing
+
+See [contributing](https://github.com/braze-community/braze-specification?tab=contributing-ov-file).
+
 ## License
 
 [MIT](https://github.com/braze-community/braze-specification/blob/master/LICENSE)

@@ -1,5 +1,7 @@
 # braze-specification
 
+Disclaimer: This is a community-maintained project and is not officially endorsed by or affiliated with Braze, Inc.
+
 [![NPM](https://nodei.co/npm/braze-specification.png)](https://nodei.co/npm/braze-specification/)
 
 [![NPM version](https://img.shields.io/npm/v/braze-specification.svg)](https://www.npmjs.com/package/braze-specification)
@@ -50,3 +52,5 @@ See [contributing](https://github.com/braze-community/braze-specification?tab=co
 ## License
 
 [MIT](https://github.com/braze-community/braze-specification/blob/master/LICENSE)
+
+Braze is a registered trademark of Braze, Inc. This project is not managed by Braze, Inc.

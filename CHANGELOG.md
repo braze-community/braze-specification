@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.11](https://github.com/braze-community/braze-specification/compare/v1.3.10...v1.3.11) (2025-11-15)
+
+
+### Documentation
+
+* **readme:** update disclaimer ([002a0b6](https://github.com/braze-community/braze-specification/commit/002a0b6d4f37cef5173cea194d5c44498d27a953))
+
 ## [1.3.10](https://github.com/braze-community/braze-specification/compare/v1.3.9...v1.3.10) (2025-06-07)
 
 

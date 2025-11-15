@@ -1,7 +1,5 @@
 # braze-specification
 
-Disclaimer: This is a community-maintained project and is not officially endorsed by or affiliated with Braze, Inc.
-
 [![NPM](https://nodei.co/npm/braze-specification.png)](https://nodei.co/npm/braze-specification/)
 
 [![NPM version](https://img.shields.io/npm/v/braze-specification.svg)](https://www.npmjs.com/package/braze-specification)
@@ -14,6 +12,9 @@ Braze API specification:
 - [Postman collection](https://github.com/braze-community/braze-specification/blob/master/postman/collection.json)
 
 See the original [Postman collection](https://documenter.getpostman.com/view/4689407/SVYrsdsG).
+
+> [!NOTE]
+> _Disclaimer:_ This is a community-maintained project and is not officially endorsed by or affiliated with Braze, Inc.
 
 ## Installation
 

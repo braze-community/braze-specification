@@ -33,7 +33,7 @@
     "json"
   ],
   "devDependencies": {
-    "@commitlint/cli": "20.4.3",
+    "@commitlint/cli": "20.4.4",
     "@commitlint/config-conventional": "20.4.4",
     "@stoplight/spectral-cli": "6.15.0",
     "costatus": "1.0.3",
